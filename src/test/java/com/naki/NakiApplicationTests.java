@@ -1,4 +1,4 @@
-package com.naki.naki;
+package com.naki;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

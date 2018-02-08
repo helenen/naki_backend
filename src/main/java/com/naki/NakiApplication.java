@@ -1,4 +1,4 @@
-package com.naki.naki;
+package com.naki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
