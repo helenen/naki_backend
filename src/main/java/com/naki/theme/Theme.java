@@ -1,12 +1,13 @@
-package theme;
+package com.naki.theme;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 
+
 @Entity
 @Table(name = "theme", schema ="public")
-public class theme implements Serializable {
+public class Theme implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,7 +43,7 @@ public class theme implements Serializable {
         this.description = description;
     }
 
-    public theme(String name, String description) {
+    public Theme(String name, String description) {
         this.name = name;
         this.description= description;
 
