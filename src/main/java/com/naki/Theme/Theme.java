@@ -1,5 +1,6 @@
-package com.naki.theme;
+package com.naki.Theme;
 
+import com.naki.Level.Level;
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -18,6 +19,11 @@ public class Theme implements Serializable {
 
     @Column(name = "description")
     private String description;
+
+    //@OneToOne(cascade=CascadeType.ALL)
+    //@JoinTable(name="cours", joinColumns={@JoinColumn(name="theme_id", referencedColumnName="id")},
+            //inverseJoinColumns={@JoinColumn(name="level_id", referencedColumnName="id")})
+
 
     public long getId() {
         return id;
