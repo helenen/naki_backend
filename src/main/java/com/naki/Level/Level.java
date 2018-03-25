@@ -1,8 +1,12 @@
 package com.naki.Level;
 
+import com.naki.Cours.Cours;
+import com.naki.Lesson.Lesson;
 import com.naki.Theme.Theme;
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 
@@ -32,6 +36,16 @@ public class Level implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+
+    @ManyToOne
+    private Cours cours;
+
+    @ManyToMany
+    private List<Lesson> lesson = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(name = "Level_Theme", joinColumns = @JoinColumn(name = "level_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "theme_id", referencedColumnName = "id"))
+    private List<Theme> theme;
 
     public Level(String name) {
         this.name = name;

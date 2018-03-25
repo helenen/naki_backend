@@ -1,0 +1,1 @@
+INSERT INTO level (ID, NAME) VALUES(01, 'debutant'cd naki       );

@@ -1,9 +1,11 @@
 package com.naki.Theme;
 
+import com.naki.Cours.Cours;
 import com.naki.Level.Level;
 import javax.persistence.*;
 import java.io.Serializable;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -19,11 +21,6 @@ public class Theme implements Serializable {
 
     @Column(name = "description")
     private String description;
-
-    //@OneToOne(cascade=CascadeType.ALL)
-    //@JoinTable(name="cours", joinColumns={@JoinColumn(name="theme_id", referencedColumnName="id")},
-            //inverseJoinColumns={@JoinColumn(name="level_id", referencedColumnName="id")})
-
 
     public long getId() {
         return id;
@@ -48,6 +45,13 @@ public class Theme implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @ManyToOne
+    private Cours cours;
+
+    @ManyToMany
+    @JoinTable(name = "Level_Theme", joinColumns = @JoinColumn(name = "level_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "theme_id", referencedColumnName = "id"))
+    private List<Level> level = new ArrayList<>();
 
     public Theme(String name, String description) {
         this.name = name;
