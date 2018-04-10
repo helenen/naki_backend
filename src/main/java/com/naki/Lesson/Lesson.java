@@ -15,18 +15,18 @@ import java.util.List;
 public class Lesson implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "order")
-    private int order;
+    @Column(name = "porder")
+    private int porder;
 
 
-    @ManyToMany
-    private List<Asset> asset = new ArrayList<>();
+   @ManyToMany
+   private List<Asset> asset = new ArrayList<>();
 
     @ManyToOne
     private Cours cours;
@@ -34,10 +34,10 @@ public class Lesson implements Serializable {
     @ManyToMany
     private List<Level> level = new ArrayList<>();
 
-    public Lesson(long id, int order, String name, List<Asset> asset) {
+    public Lesson(long id, int porder, String name) {
 
         this.id = id;
-        this.order = order;
+        this.porder = porder;
         this.name = name;
 
     }

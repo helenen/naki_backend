@@ -15,7 +15,7 @@ import java.util.List;
 public class Asset implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "type")
@@ -24,8 +24,8 @@ public class Asset implements Serializable {
     @Column(name = "value")
     private String value;
 
-    @Column(name = "order")
-    private int order;
+    @Column(name = "porder")
+    private int porder;
 
     @ManyToMany
     private List<Lesson> lesson = new ArrayList<>();
@@ -38,10 +38,10 @@ public class Asset implements Serializable {
     @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     private List<Exercice> exercice= new ArrayList<>();
 
-    public Asset(String type, String value, int order) {
+    public Asset(String type, String value, int porder) {
         this.type = type;
         this.value= value;
-        this.order= order;
+        this.porder= porder;
 
     }
 }
