@@ -1,56 +1,44 @@
 package com.naki.Lesson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+@RestController
+@RequestMapping("/api")
 public class LessonController {
 
-    private LessonService lessonService;
+    @Autowired
+    private LessonServiceImpl lessonServiceImpl;
 
-    @Autowired(required=true)
-    @Qualifier(value="personService")
-    public void setLessonService(LessonService ps){
-        this.lessonService = ps;
+     //@Autowired(required=true)
+     //@Qualifier(value="lessonService")
+     //public void setLessonService(LessonServiceImpl ps){
+     // this.lessonServiceImpl = ps;
+   //}
+
+    @RequestMapping(value = "/lesson", method = RequestMethod.GET)
+    public List<Lesson> listLesson() {
+        return this.lessonServiceImpl.listLesson();
+
     }
 
-    @RequestMapping(value = "/lessons", method = RequestMethod.GET)
-    public String listLesson(Model model) {
-        model.addAttribute("person", new LessonDao() {
-            @Override
-            public void addLesson(Lesson p) {
+    //@RequestMapping(value= "/lesson/add", method = RequestMethod.POST)
+    //public String addLesson(@ModelAttribute("lesson") Lesson p){
 
-            }
+        //if(p.getId() == 0){
+            //new lesson, add it
+            //this.lessonService.addLesson(p);
+        //}else{
+            //existing lesson, call update
+            //this.lessonService.updateLesson(p);
+        //}
 
-            @Override
-            public void updateLesson(Lesson p) {
+       // return "redirect:/lesson";
 
-            }
-
-            @Override
-            public List<Lesson> listLesson() {
-                return null;
-            }
-
-            @Override
-            public Lesson getLessonById(int id) {
-                return null;
-            }
-
-            @Override
-            public void removeLesson(int id) {
-
-            }
-
-            @Override
-            public void addPerson(Lesson p) {
-
-            }
-        });
-        model.addAttribute("listLesson", this.lessonService.listLesson());
-        return "lesson";
-    }
+    //}
 }

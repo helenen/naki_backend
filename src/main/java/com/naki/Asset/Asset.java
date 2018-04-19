@@ -24,8 +24,8 @@ public class Asset implements Serializable {
     @Column(name = "value")
     private String value;
 
-    @Column(name = "porder")
-    private int porder;
+    @Column(name = "asset_order")
+    private int asset_order;
 
     @ManyToMany
     private List<Lesson> lesson = new ArrayList<>();
@@ -38,10 +38,10 @@ public class Asset implements Serializable {
     @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     private List<Exercice> exercice= new ArrayList<>();
 
-    public Asset(String type, String value, int porder) {
+    public Asset(String type, String value, int asset_order) {
         this.type = type;
         this.value= value;
-        this.porder= porder;
+        this.asset_order= asset_order;
 
     }
 }

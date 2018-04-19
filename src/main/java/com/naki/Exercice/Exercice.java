@@ -27,8 +27,8 @@ public class Exercice implements Serializable {
     @Column(name = "answer_question_item")
     private String answer_question_item;
 
-    @Column(name = "porder")
-    private int porder;
+    @Column(name = "exercice_order")
+    private int exercice_order;
 
     @OneToMany
     private List<Cours> cours = new ArrayList<>();
@@ -40,11 +40,11 @@ public class Exercice implements Serializable {
 
     public Exercice(){}
 
-    public Exercice(String question_asset_item, String good_question_item, String answer_question_item, int porder) {
+    public Exercice(String question_asset_item, String good_question_item, String answer_question_item, int exercice_order) {
         this.question_asset_item = question_asset_item;
         this.good_question_item= good_question_item;
         this.answer_question_item= answer_question_item;
-        this.porder= porder;
+        this.exercice_order= exercice_order;
 
     }
 }

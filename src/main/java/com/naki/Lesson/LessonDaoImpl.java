@@ -4,27 +4,41 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-
-import org.apache.log4j.Logger;
-
-
-
+import java.util.List;
 
 @Repository
-public  abstract class LessonDaoImpl implements LessonDao {
+public class LessonDaoImpl implements LessonDao {
 
     private SessionFactory sessionFactory;
-    private static final Logger logger = Logger.getLogger("com.naki.Lesson.LessonDaoImpl.class");
 
-    public  LessonDaoImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
+    public void setSessionFactory(SessionFactory sf){
+        this.sessionFactory = sf;
     }
 
     @Override
-    public void addPerson(Lesson p) {
+    public void addLesson(Lesson p) {
+
+    }
+
+    @Override
+    public void updateLesson(Lesson p) {
+
+    }
+
+    @Override
+    public List<Lesson> listLesson() {
         Session session = this.sessionFactory.getCurrentSession();
-        session.persist(p);
-        logger.info("Person saved successfully, Person Details="+p);
+
+        return session.createQuery("from Lesson").list();
+    }
+
+    @Override
+    public Lesson getId(int id) {
+        return null;
+    }
+
+    @Override
+    public void removeLesson(int id) {
 
     }
 }

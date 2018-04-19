@@ -21,8 +21,8 @@ public class Lesson implements Serializable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "porder")
-    private int porder;
+    @Column(name = "lesson_order")
+    private int lesson_order;
 
 
    @ManyToMany
@@ -34,11 +34,13 @@ public class Lesson implements Serializable {
     @ManyToMany
     private List<Level> level = new ArrayList<>();
 
-    public Lesson(long id, int porder, String name) {
+    public Lesson(long id, int lesson_order, String name) {
 
         this.id = id;
-        this.porder = porder;
+        this.lesson_order = lesson_order;
         this.name = name;
 
     }
+
+
 }
