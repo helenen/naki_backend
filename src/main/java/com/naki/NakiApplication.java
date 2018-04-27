@@ -20,7 +20,7 @@ import org.springframework.ui.context.Theme;
 @ComponentScan(basePackageClasses = Lesson.class)
 @ComponentScan(basePackageClasses = Exercice.class)
 @Configuration
-@ComponentScan({"com.naki.Lesson.LessonController", "com.naki.Lesson.LessonServiceImpl"})
+@ComponentScan({"com.naki.Lesson.LessonController", "com.naki.Lesson.LessonService"})
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 
 
