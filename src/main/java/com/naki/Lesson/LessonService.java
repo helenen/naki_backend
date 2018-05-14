@@ -12,7 +12,7 @@ public class LessonService {
     @Autowired(required=true)
     private LessonRepository lessonRepository;
 
-    public List<Lesson> listAllPersons() {
+    public List<Lesson> listAllLessons() {
         System.out.println("Before finding all persons");
         return lessonRepository.findAll();
     }

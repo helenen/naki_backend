@@ -15,8 +15,12 @@ import java.util.List;
 public class Lesson implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
+
+    public String getName() {
+        return name;
+    }
 
     @Column(name = "name")
     private String name;
@@ -34,6 +38,8 @@ public class Lesson implements Serializable {
     @ManyToMany
     private List<Level> level = new ArrayList<>();
 
+    public Lesson(){};
+
     public Lesson(long id, int lesson_order, String name) {
 
         this.id = id;
@@ -41,6 +47,5 @@ public class Lesson implements Serializable {
         this.name = name;
 
     }
-
 
 }
