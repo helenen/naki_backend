@@ -38,6 +38,27 @@ public class Exercice implements Serializable {
     @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     private List<Asset> asset= new ArrayList<>();
 
+
+    public Long getId(){ return id; }
+
+    public String getQuestion_asset_item(){ return question_asset_item;}
+
+    public String getGood_question_item(){ return good_question_item;}
+
+    public String getAnswer_question_item(){ return answer_question_item;}
+
+    public Integer getExerciceOrder(){ return exercice_order;}
+
+    public Long setId(){ return id;}
+
+    public String setQuestion_asset_item(){ return question_asset_item;}
+
+    public String setGood_question_item(){ return good_question_item;}
+
+    public String setAnswer_question_item(){ return answer_question_item;}
+
+    public Integer setExerciceOrder(){ return exercice_order;}
+
     public Exercice(){}
 
     public Exercice(String question_asset_item, String good_question_item, String answer_question_item, int exercice_order) {

@@ -13,7 +13,7 @@ public class LessonService {
     private LessonRepository lessonRepository;
 
     public List<Lesson> listAllLessons() {
-        System.out.println("Before finding all persons");
+        System.out.println("Before finding all lessons");
         return lessonRepository.findAll();
     }
 }

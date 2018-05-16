@@ -14,7 +14,6 @@ public class LessonController {
 
         @GetMapping("/lessons")
         public List<Lesson> getAllLessons() {
-            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + lessonService.listAllLessons().get(0).getName());
             return lessonService.listAllLessons();
         }
 

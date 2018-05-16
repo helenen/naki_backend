@@ -27,6 +27,22 @@ public class Asset implements Serializable {
     @Column(name = "asset_order")
     private int asset_order;
 
+    public Long getId(){ return id; }
+
+    public String getType(){ return type;}
+
+    public String getValue(){ return value;}
+
+    public Integer getAssetOrder(){ return asset_order;}
+
+    public Long setId(){ return id;}
+
+    public String setType(){ return type;}
+
+    public String setValue(){ return value;}
+
+    public Integer setAssetOrder(){ return asset_order;}
+
     @ManyToMany
     private List<Lesson> lesson = new ArrayList<>();
 

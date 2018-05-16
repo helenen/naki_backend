@@ -11,16 +11,20 @@ public class LessonDTO implements Serializable {
 
     private Long lesson_order;
 
+    public Long getId(){
+        return  id;
+    }
+
+    public Long getLessonOrder(){
+        return lesson_order;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLesson_order() {
-        return name;
     }
 
     public String setLesson_order() {

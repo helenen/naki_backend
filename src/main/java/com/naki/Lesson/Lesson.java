@@ -18,16 +18,19 @@ public class Lesson implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    public String getName() {
-        return name;
-    }
-
     @Column(name = "name")
     private String name;
 
     @Column(name = "lesson_order")
     private int lesson_order;
 
+    public String getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
+    }
 
    @ManyToMany
    private List<Asset> asset = new ArrayList<>();
