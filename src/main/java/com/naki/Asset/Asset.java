@@ -54,6 +54,7 @@ public class Asset implements Serializable {
     @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     private List<Exercice> exercice= new ArrayList<>();
 
+    public Asset(){};
     public Asset(String type, String value, int asset_order) {
         this.type = type;
         this.value= value;

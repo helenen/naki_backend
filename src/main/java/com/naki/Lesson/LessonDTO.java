@@ -23,11 +23,11 @@ public class LessonDTO implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String setName(String name) {
+        return name;
     }
 
-    public String setLesson_order() {
-        return name;
+    public Long setLesson_order() {
+        return lesson_order;
     }
 }
