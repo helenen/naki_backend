@@ -35,7 +35,7 @@ public class Lesson implements Serializable {
    @ManyToMany
    private List<Asset> asset = new ArrayList<>();
 
-    @ManyToOne
+    @OneToMany
     private Cours cours;
 
     @ManyToMany
