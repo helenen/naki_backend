@@ -18,8 +18,5 @@ public class AssetController {
     public List<Asset> getAllAssets() {
         return assetService.listAllAssets();
     }
-    //@GetMapping("/assets")
-    //public List<Asset> getAllAssets() {
-        //return AssetService.listAllAssets();
-    //}
+
 }
