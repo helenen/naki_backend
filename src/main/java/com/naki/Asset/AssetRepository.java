@@ -1,14 +1,12 @@
-package com.naki.Lesson;
+package com.naki.Asset;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
 @Repository
-public interface LessonRepository extends CrudRepository<Lesson, Long> {
+public interface AssetRepository extends CrudRepository<Asset, Long> {
 
-    List<Lesson> findAll();
+    List<Asset> findAll();
 }
-
