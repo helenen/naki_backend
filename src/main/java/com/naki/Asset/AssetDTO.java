@@ -1,6 +1,8 @@
 package com.naki.Asset;
 
-public class AssetDTO {
+import java.io.Serializable;
+
+public class AssetDTO implements Serializable {
 
     private Long id;
 

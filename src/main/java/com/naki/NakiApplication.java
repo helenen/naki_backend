@@ -7,12 +7,10 @@ import com.naki.Lesson.LessonRepository;
 import com.naki.Lesson.LessonService;
 import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
 //import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.naki.Level.Level;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.ui.context.Theme;
 
 @SpringBootApplication
