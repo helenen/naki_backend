@@ -30,7 +30,7 @@ public class Cours implements Serializable {
     public String setName(){ return name;}
 
     @ManyToOne
-    private List<Lesson> lesson = new ArrayList<>();
+    private Lesson lesson = new Lesson();
 
     @ManyToMany
     private List<Theme> theme = new ArrayList<>();
