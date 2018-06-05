@@ -2,6 +2,8 @@ package com.naki.Theme;
 
 import com.naki.Cours.Cours;
 import com.naki.Level.Level;
+import com.naki.SubTheme.SubTheme;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -47,7 +49,8 @@ public class Theme implements Serializable {
     }
 
     @ManyToOne
-    private Cours cours;
+    private SubTheme subTheme;
+
 
     @ManyToMany
     @JoinTable(name = "Level_Theme", joinColumns = @JoinColumn(name = "level_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "theme_id", referencedColumnName = "id"))

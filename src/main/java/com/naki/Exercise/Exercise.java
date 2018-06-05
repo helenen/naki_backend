@@ -1,8 +1,8 @@
-package com.naki.Exercice;
+package com.naki.Exercise;
 
 import com.naki.Asset.Asset;
 import com.naki.Cours.Cours;
-import com.naki.Theme.Theme;
+import com.naki.SubTheme.SubTheme;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,8 +11,8 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "exercice", schema ="public")
-public class Exercice implements Serializable {
+@Table(name = "exercise", schema ="public")
+public class Exercise implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -27,15 +27,17 @@ public class Exercice implements Serializable {
     @Column(name = "answer_question_item")
     private String answer_question_item;
 
-    @Column(name = "exercice_order")
-    private int exercice_order;
+    @Column(name = "exercise_order")
+    private int exercise_order;
 
     @OneToMany
     private List<Cours> cours = new ArrayList<>();
 
+    @OneToMany
+    private  List<SubTheme> subThemes = new  ArrayList<>();
 
     @ManyToMany
-    @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
+    @JoinTable(name = "Exercise_Asset", joinColumns = @JoinColumn(name = "exercise_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     private List<Asset> asset= new ArrayList<>();
 
 
@@ -47,7 +49,7 @@ public class Exercice implements Serializable {
 
     public String getAnswer_question_item(){ return answer_question_item;}
 
-    public Integer getExerciceOrder(){ return exercice_order;}
+    public Integer getExerciseOrder(){ return exercise_order;}
 
     public Long setId(){ return id;}
 
@@ -57,15 +59,15 @@ public class Exercice implements Serializable {
 
     public String setAnswer_question_item(){ return answer_question_item;}
 
-    public Integer setExerciceOrder(){ return exercice_order;}
+    public Integer setExerciseOrder(){ return exercise_order;}
 
-    public Exercice(){}
+    public Exercise(){}
 
-    public Exercice(String question_asset_item, String good_question_item, String answer_question_item, int exercice_order) {
+    public Exercise(String question_asset_item, String good_question_item, String answer_question_item, int exercise_order) {
         this.question_asset_item = question_asset_item;
         this.good_question_item= good_question_item;
         this.answer_question_item= answer_question_item;
-        this.exercice_order= exercice_order;
+        this.exercise_order= exercise_order;
 
     }
 }

@@ -1,8 +1,7 @@
 package com.naki.Asset;
 
 import com.naki.Cours.Cours;
-import com.naki.Exercice.Exercice;
-import com.naki.Lesson.Lesson;
+import com.naki.Exercise.Exercise;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -43,16 +42,14 @@ public class Asset implements Serializable {
 
     public Integer setAssetOrder(){ return asset_order;}
 
-    @ManyToMany
-    private List<Lesson> lesson = new ArrayList<>();
 
     @JoinTable(name = "Cours_Asset", joinColumns = @JoinColumn(name = "cours_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
     @ManyToMany
     private List<Cours> cours = new ArrayList<>();
 
     @ManyToMany
-    @JoinTable(name = "Exercice_Asset", joinColumns = @JoinColumn(name = "exercice_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
-    private List<Exercice> exercice= new ArrayList<>();
+    @JoinTable(name = "Exercise_Asset", joinColumns = @JoinColumn(name = "exercise_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
+    private List<Exercise> exercise = new ArrayList<>();
 
     public Asset(){};
     public Asset(String type, String value, int asset_order) {
