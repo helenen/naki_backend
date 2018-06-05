@@ -2,9 +2,8 @@ package com.naki.Cours;
 
 
 import com.naki.Asset.Asset;
-import com.naki.Exercice.Exercice;
-import com.naki.Lesson.Lesson;
-import com.naki.Level.Level;
+import com.naki.Exercise.Exercise;
+import com.naki.SubTheme.SubTheme;
 import com.naki.Theme.Theme;
 
 import javax.persistence.*;
@@ -29,14 +28,15 @@ public class Cours implements Serializable {
 
     public String setName(){ return name;}
 
-    @ManyToOne
-    private Lesson lesson = new Lesson();
-
-    @ManyToMany
+    @OneToMany
     private List<Theme> theme = new ArrayList<>();
 
+    @OneToMany
+    private List<SubTheme> subTheme = new ArrayList<>();
+
+
     @ManyToOne
-    private Exercice exercice = new Exercice();
+    private Exercise exercise = new Exercise();
 
     @ManyToMany
     @JoinTable(name = "Cours_Asset", joinColumns = @JoinColumn(name = "cours_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))

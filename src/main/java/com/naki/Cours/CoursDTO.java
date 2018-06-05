@@ -1,6 +1,7 @@
 package com.naki.Cours;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class CoursDTO implements Serializable {
 

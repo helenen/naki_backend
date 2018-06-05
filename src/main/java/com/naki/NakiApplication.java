@@ -1,6 +1,6 @@
 package com.naki;
 
-import com.naki.Exercice.Exercice;
+import com.naki.Exercise.Exercise;
 import com.naki.Cours.Cours;
 import com.naki.Lesson.Lesson;
 import com.naki.Lesson.LessonRepository;
@@ -18,7 +18,7 @@ import org.springframework.ui.context.Theme;
 @ComponentScan(basePackageClasses = Theme.class)
 @ComponentScan(basePackageClasses = Cours.class)
 @ComponentScan(basePackageClasses = Lesson.class)
-@ComponentScan(basePackageClasses = Exercice.class)
+@ComponentScan(basePackageClasses = Exercise.class)
 @ComponentScan(basePackageClasses = LessonService.class)
 @ComponentScan(basePackageClasses =LessonRepository.class)
 
