@@ -2,9 +2,6 @@
 INSERT INTO asset (ID, ASSET_ORDER, TYPE, VALUE)
 VALUES(1, 1, 'image', 1);
 
-
-
-
 INSERT INTO theme (ID, NAME, DESCRIPTION)
 VALUES(1, 'Vocabulaire', 'vocabulaire'),
 (2, 'Grammaire', 'Grammaire'),
@@ -44,16 +41,19 @@ VALUES(1,'Expression de l’état-d’être',1),
 (14,'Exprimer différents niveaux de certitude （かもしれない、でしょう、だろう)',14),
 (15,'Proximité avancée des actions （が早いか、や否や、そばから)',15);
 
+INSERT INTO lesson (ID, NAME, LESSON_ORDER)
+VALUES(1, 'Grammaire de base', 1),
+(2, 'Grammaire essentielle', 2),
+(3, 'Grammaire  avancé', 3);
 
-
-INSERT INTO subTheme (ID, NAME, DESCRIPTION, TYPE, cours_id, exercise_id)
-VALUES(1, 'Leçons', 'leçon de grammaire', 'lesson',1,null),
-(2, 'exercices', 'exercice de grammaire', 'exercice',null , 1),
-(3, 'adjectifs', 'adjectif', 'adjectif-ni',3,null),
-(4, 'adjectifs', 'adjectif', 'adjectif-na',3,null),
-(5, 'verbes', 'verbes', 'verbe',4,null),
-(6, 'nombres', 'nombre', 'lesson',null,null),
-(7, 'dialogue', 'kaiwa', 'dialogue',null,null);
+INSERT INTO subTheme (ID, NAME, DESCRIPTION, TYPE, cours_id, exercise_id, lesson_id)
+VALUES(1, 'Leçons', 'leçon de grammaire', 'lesson',1,null,1),
+(2, 'exercices', 'exercice de grammaire', 'exercice',null , 1,null ),
+(3, 'adjectifs', 'adjectif', 'adjectif-ni',3,null, 1),
+(4, 'adjectifs', 'adjectif', 'adjectif-na',3,null, 1),
+(5, 'verbes', 'verbes', 'verbe',4,null,1),
+(6, 'nombres', 'nombre', 'lesson',null,null,1),
+(7, 'dialogue', 'kaiwa', 'dialogue',null,null,null);
 
 INSERT INTO level (ID, NAME)
 VALUES(1, 'Debutant'),

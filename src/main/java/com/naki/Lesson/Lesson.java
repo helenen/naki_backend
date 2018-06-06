@@ -4,6 +4,7 @@ package com.naki.Lesson;
 import com.naki.Asset.Asset;
 import com.naki.Cours.Cours;
 import com.naki.Level.Level;
+import com.naki.SubTheme.SubTheme;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -37,6 +38,12 @@ public class Lesson implements Serializable {
 
     @ManyToMany
     private List<Level> level = new ArrayList<>();
+
+    @ManyToOne
+    private Cours cours;
+
+    @OneToMany
+    private List<SubTheme> subTheme = new ArrayList<>();
 
     public Lesson(){};
 
