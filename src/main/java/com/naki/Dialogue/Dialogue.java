@@ -1,5 +1,6 @@
 package com.naki.Dialogue;
 
+import com.naki.Exercise.Exercise;
 import com.naki.Theme.Theme;
 
 import javax.persistence.*;
@@ -33,6 +34,9 @@ public class Dialogue implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    @ManyToOne
+    private Exercise exercise;
 
     public Dialogue(long id, String name) {
         this.id = id;

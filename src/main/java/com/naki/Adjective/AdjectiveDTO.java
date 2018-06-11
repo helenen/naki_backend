@@ -8,6 +8,8 @@ public class AdjectiveDTO implements Serializable {
 
     private String name;
 
+    private String romaji;
+
     public long getId() {
         return id;
     }
@@ -22,5 +24,13 @@ public class AdjectiveDTO implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getRomaji() {
+        return romaji;
+    }
+
+    public void setRomaji(String romaji) {
+        this.romaji = romaji;
     }
 }

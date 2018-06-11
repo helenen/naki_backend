@@ -8,6 +8,16 @@ public class NomberDTO implements Serializable {
 
     private String name;
 
+    private String romaji;
+
+    public String getRomaji() {
+        return romaji;
+    }
+
+    public void setRomaji(String romaji) {
+        this.romaji = romaji;
+    }
+
     public long getId() {
         return id;
     }

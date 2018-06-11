@@ -7,8 +7,18 @@ VALUES(1, 'Vocabulaire', 'vocabulaire'),
 (2, 'Grammaire', 'Grammaire'),
 (3, 'Dialogue', 'Dialogue');
 
+INSERT INTO category (ID, NAME)
+VALUES(1, 'lesson'),
+(2,'exercice'),
+(3, 'adjectif-ni'),
+(4, 'adjectif-na'),
+(5, 'verbe'),
+(6, 'nombre'),
+(7, 'dialogue');
+
+
 INSERT INTO exercise (ID, QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM, EXERCISE_ORDER)
-VALUES(1, 'Forme déclarative', 'これだ','', 1),
+VALUES(1, 'maison', 'ie','iu', 1),
 (2, 'Forme déclarative', 'これだ','', 2),
 (3, 'Forme déclarative', 'これだ','', 3),
 (4, 'Forme déclarative', 'これだ','', 4),
@@ -23,6 +33,16 @@ VALUES(1, 'Forme déclarative', 'これだ','', 1),
 (13,'Forme déclarative', 'これだ','', 13),
 (14,'Forme déclarative', 'これだ','', 14),
 (15,'Forme déclarative', 'これだ','', 15);
+
+INSERT INTO adjective(ID, NAME, ROMAJI,  exercise_id)
+VALUES(1, '家','ie', 1);
+
+INSERT INTO nomber(ID, NAME,ROMAJI, exercise_id)
+VALUES(1, '一つ','hitotsu', 1);
+
+INSERT INTO nomber_category(nomber_id, category_id)
+VALUES(1,6);
+
 
 INSERT INTO cours (ID, NAME)
 VALUES(1,'Expression de l’état-d’être'),
@@ -40,15 +60,6 @@ VALUES(1,'Expression de l’état-d’être'),
 (13,'Choses qui devraient être d’une certaine manière （はず、べき、べく、べからず)'),
 (14,'Exprimer différents niveaux de certitude （かもしれない、でしょう、だろう)'),
 (15,'Proximité avancée des actions （が早いか、や否や、そばから)');
-
-INSERT INTO category (ID, NAME)
-VALUES(1, 'lesson'),
-(2,'exercice'),
-(3, 'adjectif-ni'),
-(4, 'adjectif-na'),
-(5, 'verbe'),
-(6, 'nombre'),
-(7, 'dialogue');
 
 
 INSERT INTO level (ID, NAME)

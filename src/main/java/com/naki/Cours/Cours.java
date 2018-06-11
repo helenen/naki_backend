@@ -30,10 +30,6 @@ public class Cours implements Serializable {
     @ManyToOne
     private Exercise exercise = new Exercise();
 
-    @ManyToMany
-    @JoinTable(name = "Cours_Asset", joinColumns = @JoinColumn(name = "cours_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
-    private List<Asset> asset = new ArrayList<>();
-
     public Cours(){};
 
     public Cours (long id, String name){

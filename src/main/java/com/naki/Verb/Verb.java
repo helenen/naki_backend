@@ -1,6 +1,7 @@
 package com.naki.Verb;
 
 import com.naki.Category.Category;
+import com.naki.Exercise.Exercise;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -35,6 +36,10 @@ public class Verb implements Serializable {
 
     @OneToMany
     private List<Category> categories;
+
+    @ManyToOne
+    private Exercise exercise;
+
 
     public Verb(long id, String name) {
         this.id = id;

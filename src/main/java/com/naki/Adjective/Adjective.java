@@ -2,6 +2,7 @@ package com.naki.Adjective;
 
 
 import com.naki.Category.Category;
+import com.naki.Exercise.Exercise;
 import com.naki.Theme.Theme;
 
 import javax.persistence.*;
@@ -20,6 +21,9 @@ public class Adjective implements Serializable {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "romaji")
+    private String romaji;
+
     public long getId() {
         return id;
     }
@@ -36,8 +40,19 @@ public class Adjective implements Serializable {
         this.name = name;
     }
 
+    public String getRomaji() {
+        return romaji;
+    }
+
+    public void setRomaji(String romaji) {
+        this.romaji = romaji;
+    }
+
     @OneToMany
     private List<Category> categories;
+
+    @ManyToOne
+    private Exercise exercise;
 
     public Adjective(long id, String name) {
         this.id = id;
