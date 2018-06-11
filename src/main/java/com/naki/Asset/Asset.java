@@ -43,14 +43,6 @@ public class Asset implements Serializable {
     public Integer setAssetOrder(){ return asset_order;}
 
 
-    @JoinTable(name = "Cours_Asset", joinColumns = @JoinColumn(name = "cours_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
-    @ManyToMany
-    private List<Cours> cours = new ArrayList<>();
-
-    @ManyToMany
-    @JoinTable(name = "Exercise_Asset", joinColumns = @JoinColumn(name = "exercise_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "asset_id", referencedColumnName = "id"))
-    private List<Exercise> exercise = new ArrayList<>();
-
     public Asset(){};
     public Asset(String type, String value, int asset_order) {
         this.type = type;

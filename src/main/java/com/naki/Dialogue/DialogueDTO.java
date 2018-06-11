@@ -1,19 +1,15 @@
-package com.naki.Category;
+package com.naki.Dialogue;
 
+import com.naki.Theme.Theme;
 
-import javax.persistence.*;
+import javax.persistence.OneToMany;
 import java.io.Serializable;
+import java.util.List;
 
-@Entity
-@Table(name = "category", schema ="public")
+public class DialogueDTO implements Serializable {
 
-public class Category  implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    @Column(name = "name")
     private String name;
 
     public long getId() {
@@ -33,9 +29,8 @@ public class Category  implements Serializable {
     }
 
 
-    public Category(long id, String name) {
+    public DialogueDTO(long id, String name) {
         this.id = id;
         this.name = name;
     }
-
 }

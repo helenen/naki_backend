@@ -2,12 +2,7 @@ package com.naki;
 
 import com.naki.Exercise.Exercise;
 import com.naki.Cours.Cours;
-import com.naki.Lesson.Lesson;
-import com.naki.Lesson.LessonRepository;
-import com.naki.Lesson.LessonService;
 import org.springframework.boot.SpringApplication;
-//import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-//import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.naki.Level.Level;
@@ -17,10 +12,8 @@ import org.springframework.ui.context.Theme;
 @ComponentScan(basePackageClasses = Level.class)
 @ComponentScan(basePackageClasses = Theme.class)
 @ComponentScan(basePackageClasses = Cours.class)
-@ComponentScan(basePackageClasses = Lesson.class)
 @ComponentScan(basePackageClasses = Exercise.class)
-@ComponentScan(basePackageClasses = LessonService.class)
-@ComponentScan(basePackageClasses =LessonRepository.class)
+
 
 
 public class NakiApplication {
