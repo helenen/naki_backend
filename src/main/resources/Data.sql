@@ -24,36 +24,32 @@ VALUES(1, 'Forme déclarative', 'これだ','', 1),
 (14,'Forme déclarative', 'これだ','', 14),
 (15,'Forme déclarative', 'これだ','', 15);
 
-INSERT INTO cours (ID, NAME, exercise_id)
-VALUES(1,'Expression de l’état-d’être',1),
-(2, 'Introduction aux particules （は、も、が)',2),
-(3,'Adjectifs',3),
-(4,'Notions de base sur les verbes',4),
-(5,'Forme négative des verbes',5),
-(6,'Forme polie et radicaux des verbes （～です、～ます)',6),
-(7,'Marque de questionnement （か)',7),
-(8,'Phrases composées （forme en ～て、から、ので、のに、が、けど、し、～たりする)',8),
-(9,'Autres utilisations de la forme en ～て （～ている、～てある、～ておく、～ていく、～てくる)',9),
-(10,'Conditionnel （と、なら、ば、たら)',10),
-(11,'Tendances （～がち、～つつ、きらいがある)',11),
-(12,'Montrer les signes de quelque chose （～がる、ばかり、～めく)',12),
-(13,'Choses qui devraient être d’une certaine manière （はず、べき、べく、べからず)',13),
-(14,'Exprimer différents niveaux de certitude （かもしれない、でしょう、だろう)',14),
-(15,'Proximité avancée des actions （が早いか、や否や、そばから)',15);
+INSERT INTO cours (ID, NAME)
+VALUES(1,'Expression de l’état-d’être'),
+(2, 'Introduction aux particules （は、も、が)'),
+(3,'Adjectifs'),
+(4,'Notions de base sur les verbes'),
+(5,'Forme négative des verbes'),
+(6,'Forme polie et radicaux des verbes （～です、～ます)'),
+(7,'Marque de questionnement （か)'),
+(8,'Phrases composées （forme en ～て、から、ので、のに、が、けど、し、～たりする)'),
+(9,'Autres utilisations de la forme en ～て （～ている、～てある、～ておく、～ていく、～てくる)'),
+(10,'Conditionnel （と、なら、ば、たら)'),
+(11,'Tendances （～がち、～つつ、きらいがある)'),
+(12,'Montrer les signes de quelque chose （～がる、ばかり、～めく)'),
+(13,'Choses qui devraient être d’une certaine manière （はず、べき、べく、べからず)'),
+(14,'Exprimer différents niveaux de certitude （かもしれない、でしょう、だろう)'),
+(15,'Proximité avancée des actions （が早いか、や否や、そばから)');
 
-INSERT INTO lesson (ID, NAME, LESSON_ORDER)
-VALUES(1, 'Grammaire de base', 1),
-(2, 'Grammaire essentielle', 2),
-(3, 'Grammaire  avancé', 3);
+INSERT INTO category (ID, NAME)
+VALUES(1, 'lesson'),
+(2,'exercice'),
+(3, 'adjectif-ni'),
+(4, 'adjectif-na'),
+(5, 'verbe'),
+(6, 'nombre'),
+(7, 'dialogue');
 
-INSERT INTO subTheme (ID, NAME, DESCRIPTION, TYPE, cours_id, exercise_id, lesson_id)
-VALUES(1, 'Leçons', 'leçon de grammaire', 'lesson',1,null,1),
-(2, 'exercices', 'exercice de grammaire', 'exercice',null , 1,null ),
-(3, 'adjectifs', 'adjectif', 'adjectif-ni',3,null, 1),
-(4, 'adjectifs', 'adjectif', 'adjectif-na',3,null, 1),
-(5, 'verbes', 'verbes', 'verbe',4,null,1),
-(6, 'nombres', 'nombre', 'lesson',null,null,1),
-(7, 'dialogue', 'kaiwa', 'dialogue',null,null,null);
 
 INSERT INTO level (ID, NAME)
 VALUES(1, 'Debutant'),
