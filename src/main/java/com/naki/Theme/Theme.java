@@ -1,8 +1,11 @@
 package com.naki.Theme;
 
+import com.naki.Adjective.Adjective;
 import com.naki.Cours.Cours;
+import com.naki.Dialogue.Dialogue;
 import com.naki.Level.Level;
-import com.naki.SubTheme.SubTheme;
+import com.naki.Nomber.Nomber;
+import com.naki.Verb.Verb;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -48,13 +51,23 @@ public class Theme implements Serializable {
         this.description = description;
     }
 
+    @OneToMany
+    private List<Level> level;
+
     @ManyToOne
-    private SubTheme subTheme;
+    private Cours cours;
 
+    @ManyToOne
+    private Adjective adjective;
 
-    @ManyToMany
-    @JoinTable(name = "Level_Theme", joinColumns = @JoinColumn(name = "level_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "theme_id", referencedColumnName = "id"))
-    private List<Level> level = new ArrayList<>();
+    @ManyToOne
+    private Nomber nomber;
+
+    @ManyToOne
+    private Verb verb;
+
+    @ManyToOne
+    private Dialogue dialogue;
 
     public Theme(String name, String description) {
         this.name = name;

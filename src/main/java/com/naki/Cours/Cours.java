@@ -3,8 +3,6 @@ package com.naki.Cours;
 
 import com.naki.Asset.Asset;
 import com.naki.Exercise.Exercise;
-import com.naki.Lesson.Lesson;
-import com.naki.SubTheme.SubTheme;
 import com.naki.Theme.Theme;
 
 import javax.persistence.*;
@@ -28,15 +26,6 @@ public class Cours implements Serializable {
     public Long setId(){ return id;}
 
     public String setName(){ return name;}
-
-    @OneToMany
-    private List<Theme> theme = new ArrayList<>();
-
-    @OneToMany
-    private List<SubTheme> subTheme = new ArrayList<>();
-
-    @OneToMany
-    private List<Lesson> lesson = new ArrayList<>();
 
     @ManyToOne
     private Exercise exercise = new Exercise();

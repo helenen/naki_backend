@@ -1,13 +1,14 @@
-package com.naki.Category;
+package com.naki.Verb;
 
+import com.naki.Category.Category;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
-@Table(name = "category", schema ="public")
-
-public class Category  implements Serializable {
+@Table(name = "verb", schema ="public")
+public class Verb implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -32,10 +33,11 @@ public class Category  implements Serializable {
         this.name = name;
     }
 
+    @OneToMany
+    private List<Category> categories;
 
-    public Category(long id, String name) {
+    public Verb(long id, String name) {
         this.id = id;
         this.name = name;
     }
-
 }

@@ -1,13 +1,17 @@
-package com.naki.Category;
+package com.naki.Adjective;
 
+
+import com.naki.Category.Category;
+import com.naki.Theme.Theme;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
-@Table(name = "category", schema ="public")
+@Table(name = "adjective", schema ="public")
+public class Adjective implements Serializable {
 
-public class Category  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -32,10 +36,11 @@ public class Category  implements Serializable {
         this.name = name;
     }
 
+    @OneToMany
+    private List<Category> categories;
 
-    public Category(long id, String name) {
+    public Adjective(long id, String name) {
         this.id = id;
         this.name = name;
     }
-
 }

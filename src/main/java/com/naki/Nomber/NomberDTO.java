@@ -1,18 +1,18 @@
-package com.naki.Category;
+package com.naki.Nomber;
 
 import java.io.Serializable;
 
-public class CategoryDTO   implements Serializable {
+public class NomberDTO implements Serializable {
 
-    private Long id;
+    private long id;
 
     private String name;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
