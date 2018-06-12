@@ -1,8 +1,8 @@
-package com.naki.Adjective;
+package com.naki.Vocabulary;
 
 import java.io.Serializable;
 
-public class AdjectiveDTO implements Serializable {
+public class VocabularyDTO implements Serializable {
 
     private long id;
 

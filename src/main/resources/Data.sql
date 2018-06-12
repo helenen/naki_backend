@@ -1,12 +1,3 @@
-
-INSERT INTO asset (ID, ASSET_ORDER, TYPE, VALUE)
-VALUES(1, 1, 'image', 1);
-
-INSERT INTO theme (ID, NAME, DESCRIPTION)
-VALUES(1, 'Vocabulaire', 'vocabulaire'),
-(2, 'Grammaire', 'Grammaire'),
-(3, 'Dialogue', 'Dialogue');
-
 INSERT INTO category (ID, NAME)
 VALUES(1, 'lesson'),
 (2,'exercice'),
@@ -14,12 +5,25 @@ VALUES(1, 'lesson'),
 (4, 'adjectif-na'),
 (5, 'verbe'),
 (6, 'nombre'),
-(7, 'dialogue');
+(7, 'dialogue'),
+(8, 'son'),
+(9,'image'),
+(10, 'nom'),
+(11,'mois'),
+(12,'jour du mois');
+
+INSERT INTO asset (ID, ASSET_ORDER,VALUE)
+VALUES(1, 1, 1);
+
+INSERT INTO theme (ID, NAME, DESCRIPTION)
+VALUES(1, 'Vocabulaire', 'vocabulaire'),
+(2, 'Grammaire', 'Grammaire'),
+(3, 'Dialogue', 'Dialogue');
 
 
-INSERT INTO exercise (ID, QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM, EXERCISE_ORDER)
-VALUES(1, 'maison', 'ie','iu', 1),
-(2, 'Forme déclarative', 'これだ','', 2),
+INSERT INTO exercise (ID, QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER)
+VALUES(1, 'ie', 'maison','pantalon','chiffre','soleil', 1);
+/*(2, 'Forme déclarative', 'これだ','', 2),
 (3, 'Forme déclarative', 'これだ','', 3),
 (4, 'Forme déclarative', 'これだ','', 4),
 (5, 'Forme déclarative', 'これだ','', 5),
@@ -32,9 +36,9 @@ VALUES(1, 'maison', 'ie','iu', 1),
 (12,'Forme déclarative', 'これだ','', 12),
 (13,'Forme déclarative', 'これだ','', 13),
 (14,'Forme déclarative', 'これだ','', 14),
-(15,'Forme déclarative', 'これだ','', 15);
+(15,'Forme déclarative', 'これだ','', 15);*/
 
-INSERT INTO adjective(ID, NAME, ROMAJI,  exercise_id)
+INSERT INTO vocabulary(ID, NAME, ROMAJI,  exercise_id)
 VALUES(1, '家','ie', 1);
 
 INSERT INTO nomber(ID, NAME,ROMAJI, exercise_id)
@@ -44,22 +48,15 @@ INSERT INTO nomber_category(nomber_id, category_id)
 VALUES(1,6);
 
 
-INSERT INTO cours (ID, NAME)
-VALUES(1,'Expression de l’état-d’être'),
-(2, 'Introduction aux particules （は、も、が)'),
-(3,'Adjectifs'),
-(4,'Notions de base sur les verbes'),
-(5,'Forme négative des verbes'),
-(6,'Forme polie et radicaux des verbes （～です、～ます)'),
-(7,'Marque de questionnement （か)'),
-(8,'Phrases composées （forme en ～て、から、ので、のに、が、けど、し、～たりする)'),
-(9,'Autres utilisations de la forme en ～て （～ている、～てある、～ておく、～ていく、～てくる)'),
-(10,'Conditionnel （と、なら、ば、たら)'),
-(11,'Tendances （～がち、～つつ、きらいがある)'),
-(12,'Montrer les signes de quelque chose （～がる、ばかり、～めく)'),
-(13,'Choses qui devraient être d’une certaine manière （はず、べき、べく、べからず)'),
-(14,'Exprimer différents niveaux de certitude （かもしれない、でしょう、だろう)'),
-(15,'Proximité avancée des actions （が早いか、や否や、そばから)');
+INSERT INTO cours (ID, NAME, sub_title, TITLE, TEXT, EXEMPLE)
+VALUES(1,'Introduction aux particules （は、も、が)','chapitre 1','Définir les fonctions grammaticales avec les particules','Nous allons maintenant faire bon usage de ce que nous venons d\apprendre en associant un nom à un autre nom.
+Ceci peut être réalisé à l\aide de ce que l\on appelle des particules.
+Les particules, formées de un ou deux caractères hiragana, s\ajoutent à la fin d\un mot pour définir quelle fonction grammaticale il remplit dans la phrase.
+Employer les bonnes particules est très important car la signification d\une phrase peut en être radicalement changé. Par exemple, la phrase "manger du poisson." peut devenir "le poisson mange." simplement en changeant une particule.
+',null);
+
+/*(2, 'La forme pour exprimer le potentiel'),
+(3,'Exprimer différents niveaux de certitude');*/
 
 
 INSERT INTO level (ID, NAME)

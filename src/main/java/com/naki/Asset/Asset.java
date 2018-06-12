@@ -1,5 +1,6 @@
 package com.naki.Asset;
 
+import com.naki.Category.Category;
 import com.naki.Cours.Cours;
 import com.naki.Exercise.Exercise;
 
@@ -42,6 +43,8 @@ public class Asset implements Serializable {
 
     public Integer setAssetOrder(){ return asset_order;}
 
+    @OneToMany
+    private List<Category> category;
 
     public Asset(){};
     public Asset(String type, String value, int asset_order) {

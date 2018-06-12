@@ -1,6 +1,6 @@
 package com.naki.Theme;
 
-import com.naki.Adjective.Adjective;
+import com.naki.Vocabulary.Vocabulary;
 import com.naki.Cours.Cours;
 import com.naki.Dialogue.Dialogue;
 import com.naki.Level.Level;
@@ -9,7 +9,6 @@ import com.naki.Verb.Verb;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -58,7 +57,7 @@ public class Theme implements Serializable {
     private Cours cours;
 
     @ManyToOne
-    private Adjective adjective;
+    private Vocabulary vocabulary;
 
     @ManyToOne
     private Nomber nomber;
