@@ -22,21 +22,12 @@ VALUES(1, 'Vocabulaire', 'vocabulaire'),
 
 
 INSERT INTO exercise (ID, QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER)
-VALUES(1, 'ie', 'maison','pantalon','chiffre','soleil', 1);
-/*(2, 'Forme déclarative', 'これだ','', 2),
-(3, 'Forme déclarative', 'これだ','', 3),
-(4, 'Forme déclarative', 'これだ','', 4),
+VALUES(1, '学校_どこ？', 'は','それ','も','が', 1),
+(2, 'これ_何？','は','も','どれ','が', 2),
+(3, 'ここ_図書館だ', 'が','どれ','も','は', 3);
+/*(4, 'Forme déclarative', 'これだ', 4),
 (5, 'Forme déclarative', 'これだ','', 5),
-(6, 'Forme déclarative', 'これだ','', 6),
-(7, 'Forme déclarative', 'これだ','', 7),
-(8, 'Forme déclarative', 'これだ','', 8),
-(9, 'Forme déclarative', 'これだ','', 9),
-(10,'Forme déclarative', 'これだ','', 10),
-(11,'Forme déclarative', 'これだ','', 11),
-(12,'Forme déclarative', 'これだ','', 12),
-(13,'Forme déclarative', 'これだ','', 13),
-(14,'Forme déclarative', 'これだ','', 14),
-(15,'Forme déclarative', 'これだ','', 15);*/
+(6, 'Forme déclarative', 'これだ','', 6);*/
 
 INSERT INTO vocabulary(ID, NAME, ROMAJI,  exercise_id)
 VALUES(1, '家','ie', 1);
@@ -89,6 +80,9 @@ Exceptions - 「する」 devient 「できる」 et 「くる」 devient 「こ
 残念だが、今週末は行けない。- Malheureusement, je ne peux pas aller ce week-end.
 もう信じられない。- Déjà ? Je ne peux le croire.',2) ;
 
+INSERT INTO chapter_exercise (chapter_id, exercise_id)
+VALUES(1,1),
+(2,2);
 
 INSERT INTO level (ID, NAME)
 VALUES(1, 'Debutant'),
