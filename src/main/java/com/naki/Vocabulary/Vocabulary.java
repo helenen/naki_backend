@@ -1,17 +1,16 @@
-package com.naki.Adjective;
+package com.naki.Vocabulary;
 
 
 import com.naki.Category.Category;
 import com.naki.Exercise.Exercise;
-import com.naki.Theme.Theme;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "adjective", schema ="public")
-public class Adjective implements Serializable {
+@Table(name = "vocabulary", schema ="public")
+public class Vocabulary implements Serializable {
 
 
     @Id
@@ -54,7 +53,7 @@ public class Adjective implements Serializable {
     @ManyToOne
     private Exercise exercise;
 
-    public Adjective(long id, String name) {
+    public Vocabulary(long id, String name) {
         this.id = id;
         this.name = name;
     }

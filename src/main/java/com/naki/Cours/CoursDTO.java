@@ -16,4 +16,5 @@ public class CoursDTO implements Serializable {
     public Long setId(){ return id;}
 
     public String setName(){ return name;}
+
 }

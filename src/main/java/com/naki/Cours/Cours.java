@@ -27,9 +27,6 @@ public class Cours implements Serializable {
 
     public String setName(){ return name;}
 
-    @ManyToOne
-    private Exercise exercise = new Exercise();
-
     public Cours(){};
 
     public Cours (long id, String name){
