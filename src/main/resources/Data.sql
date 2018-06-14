@@ -80,9 +80,11 @@ Exceptions - 「する」 devient 「できる」 et 「くる」 devient 「こ
 残念だが、今週末は行けない。- Malheureusement, je ne peux pas aller ce week-end.
 もう信じられない。- Déjà ? Je ne peux le croire.',2) ;
 
+/*
 INSERT INTO chapter_exercise (chapter_id, exercise_id)
 VALUES(1,1),
 (2,2);
+*/
 
 INSERT INTO level (ID, NAME)
 VALUES(1, 'Debutant'),

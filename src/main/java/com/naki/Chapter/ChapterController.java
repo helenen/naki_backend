@@ -15,7 +15,7 @@ public class ChapterController {
     private ChapterService chapterService;
 
 
-    @GetMapping("/chapter")
+    @GetMapping("/chapters")
     public List<Chapter> getAllChapters() {
         return chapterService.listAllChapters();
     }
