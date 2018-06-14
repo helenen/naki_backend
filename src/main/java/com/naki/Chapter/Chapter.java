@@ -50,8 +50,16 @@ public class Chapter implements Serializable {
         this.exemple = exemple;
     }
 
-    @OneToMany
-    private List<Exercise> exercise ;
+    @ManyToOne
+    private Exercise exercise ;
+
+    public Cours getCours() {
+        return cours;
+    }
+
+    public void setCours(Cours cours) {
+        this.cours = cours;
+    }
 
     @ManyToOne
     private Cours cours;

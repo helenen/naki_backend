@@ -35,9 +35,6 @@ public class Exercise implements Serializable {
     @Column(name = "exercise_order")
     private int exercise_order;
 
-    @OneToMany
-    private List<Cours> cours = new ArrayList<>();
-
     @ManyToOne
     private Asset asset;
 
