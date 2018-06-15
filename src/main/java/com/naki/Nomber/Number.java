@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "nomber", schema ="public")
-public class Nomber  implements Serializable {
+@Table(name = "number", schema ="public")
+public class Number implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -46,13 +46,13 @@ public class Nomber  implements Serializable {
         this.romaji = romaji;
     }
 
-    @OneToMany
-    private List<Category> category;
+    @ManyToOne
+    private Category category;
 
     @ManyToOne
     private Exercise exercise;
 
-    public Nomber(long id, String name,String romaji) {
+    public Number(long id, String name, String romaji) {
         this.id = id;
         this.name = name;
         this.romaji = romaji;

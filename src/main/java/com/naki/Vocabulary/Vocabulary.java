@@ -47,8 +47,8 @@ public class Vocabulary implements Serializable {
         this.romaji = romaji;
     }
 
-    @OneToMany
-    private List<Category> categories;
+    @ManyToOne
+    private Category category;
 
     @ManyToOne
     private Exercise exercise;

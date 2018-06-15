@@ -43,8 +43,8 @@ public class Asset implements Serializable {
 
     public Integer setAssetOrder(){ return asset_order;}
 
-    @OneToMany
-    private List<Category> category;
+    @ManyToOne
+    private Category category;
 
     public Asset(){};
     public Asset(String type, String value, int asset_order) {

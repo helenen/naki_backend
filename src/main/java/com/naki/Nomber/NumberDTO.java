@@ -2,7 +2,7 @@ package com.naki.Nomber;
 
 import java.io.Serializable;
 
-public class NomberDTO implements Serializable {
+public class NumberDTO implements Serializable {
 
     private long id;
 

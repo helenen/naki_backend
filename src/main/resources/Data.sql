@@ -32,11 +32,8 @@ VALUES(1, '学校_どこ？', 'は','それ','も','が', 1),
 INSERT INTO vocabulary(ID, NAME, ROMAJI,  exercise_id)
 VALUES(1, '家','ie', 1);
 
-INSERT INTO nomber(ID, NAME,ROMAJI, exercise_id)
+INSERT INTO number(ID, NAME,ROMAJI, exercise_id)
 VALUES(1, '一つ','hitotsu', 1);
-
-INSERT INTO nomber_category(nomber_id, category_id)
-VALUES(1,6);
 
 
 INSERT INTO cours (ID, NAME)

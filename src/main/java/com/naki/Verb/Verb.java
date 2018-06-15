@@ -34,8 +34,8 @@ public class Verb implements Serializable {
         this.name = name;
     }
 
-    @OneToMany
-    private List<Category> categories;
+    @ManyToOne
+    private Category category;
 
     @ManyToOne
     private Exercise exercise;
