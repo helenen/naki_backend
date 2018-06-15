@@ -4,7 +4,7 @@ import com.naki.Vocabulary.Vocabulary;
 import com.naki.Cours.Cours;
 import com.naki.Dialogue.Dialogue;
 import com.naki.Level.Level;
-import com.naki.Nomber.Nomber;
+import com.naki.Nomber.Number;
 import com.naki.Verb.Verb;
 
 import javax.persistence.*;
@@ -60,7 +60,7 @@ public class Theme implements Serializable {
     private Vocabulary vocabulary;
 
     @ManyToOne
-    private Nomber nomber;
+    private Number nomber;
 
     @ManyToOne
     private Verb verb;
