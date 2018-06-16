@@ -1,9 +1,9 @@
-package com.naki.Cours;
+package com.naki.Lesson;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class CoursDTO implements Serializable {
+public class LessonDTO implements Serializable {
 
     private Long id;
 

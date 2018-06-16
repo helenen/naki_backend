@@ -1,4 +1,4 @@
-package com.naki.Cours;
+package com.naki.Lesson;
 
 
 import com.naki.Asset.Asset;
@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "cours", schema ="public")
-public class Cours implements Serializable {
+@Table(name = "lesson", schema ="public")
+public class Lesson implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -29,9 +29,9 @@ public class Cours implements Serializable {
 
     public String setName(){ return name;}
 
-    public Cours(){};
+    public Lesson(){};
 
-    public Cours (long id, String name){
+    public Lesson (long id, String name){
         this.id = id;
         this.name = name;
     }

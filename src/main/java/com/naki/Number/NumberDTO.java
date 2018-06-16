@@ -1,4 +1,4 @@
-package com.naki.Nomber;
+package com.naki.Number;
 
 import java.io.Serializable;
 

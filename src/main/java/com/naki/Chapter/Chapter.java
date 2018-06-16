@@ -1,12 +1,10 @@
 package com.naki.Chapter;
 
-import com.naki.Cours.Cours;
 import com.naki.Exercise.Exercise;
+import com.naki.Lesson.Lesson;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "chapter", schema ="public")
@@ -53,16 +51,16 @@ public class Chapter implements Serializable {
     @ManyToOne
     private Exercise exercise ;
 
-    public Cours getCours() {
-        return cours;
+    public Lesson getLesson() {
+        return lesson;
     }
 
-    public void setCours(Cours cours) {
-        this.cours = cours;
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
     }
 
     @ManyToOne
-    private Cours cours;
+    private Lesson lesson;
 
     public Chapter() {};
 

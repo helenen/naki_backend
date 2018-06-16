@@ -36,12 +36,12 @@ INSERT INTO number(ID, NAME,ROMAJI, exercise_id)
 VALUES(1, '一つ','hitotsu', 1);
 
 
-INSERT INTO cours (ID, NAME)
+INSERT INTO lesson (ID, NAME)
 VALUES(1,'Introduction aux particules （は、も、が)'),
 (2, 'La forme pour exprimer le potentiel'),
 (3,'Exprimer différents niveaux de certitude');
 
-INSERT INTO chapter(ID,TITLE, TEXT, EXEMPLE, cours_id )
+INSERT INTO chapter(ID,TITLE, TEXT, EXEMPLE, lesson_id )
 VALUES(1,'Définir les fonctions grammaticales avec les particules','Nous allons maintenant faire bon usage de ce que nous venons d&apos;apprendre en associant un nom à un autre nom.
 Ceci peut être réalisé à l&apos;aide de ce que l&apos;on appelle des particules.
 Les particules, formées de un ou deux caractères hiragana, s&apos;ajoutent à la fin d&apos;un mot pour définir quelle fonction grammaticale il remplit dans la phrase.

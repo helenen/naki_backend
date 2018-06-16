@@ -1,12 +1,7 @@
 package com.naki.Level;
 
-import com.naki.Cours.Cours;
-import com.naki.Theme.Theme;
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 
 @Entity

@@ -1,12 +1,9 @@
 package com.naki.Exercise;
 
 import com.naki.Asset.Asset;
-import com.naki.Cours.Cours;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity

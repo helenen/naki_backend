@@ -1,7 +1,7 @@
 package com.naki;
 
 import com.naki.Exercise.Exercise;
-import com.naki.Cours.Cours;
+import com.naki.Lesson.Lesson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import org.springframework.ui.context.Theme;
 @SpringBootApplication
 @ComponentScan(basePackageClasses = Level.class)
 @ComponentScan(basePackageClasses = Theme.class)
-@ComponentScan(basePackageClasses = Cours.class)
+@ComponentScan(basePackageClasses = Lesson.class)
 @ComponentScan(basePackageClasses = Exercise.class)
 
 
