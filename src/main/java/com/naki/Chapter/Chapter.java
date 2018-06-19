@@ -5,6 +5,7 @@ import com.naki.Lesson.Lesson;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "chapter", schema ="public")
@@ -48,19 +49,19 @@ public class Chapter implements Serializable {
         this.exemple = exemple;
     }
 
-    @ManyToOne
-    private Exercise exercise ;
-
-    public Lesson getLesson() {
+    public List<Lesson> getLesson() {
         return lesson;
     }
 
-    public void setLesson(Lesson lesson) {
+    public void setLesson(List<Lesson> lesson) {
         this.lesson = lesson;
     }
 
     @ManyToOne
-    private Lesson lesson;
+    private Exercise exercise ;
+
+    @OneToMany
+    private List<Lesson> lesson;
 
     public Chapter() {};
 

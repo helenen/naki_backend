@@ -2,6 +2,7 @@ package com.naki.Lesson;
 
 
 import com.naki.Asset.Asset;
+import com.naki.Chapter.Chapter;
 import com.naki.Exercise.Exercise;
 import com.naki.Theme.Theme;
 
@@ -30,6 +31,9 @@ public class Lesson implements Serializable {
     public String setName(){ return name;}
 
     public Lesson(){};
+
+    @ManyToOne
+    private Chapter chapter;
 
     public Lesson (long id, String name){
         this.id = id;

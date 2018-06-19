@@ -50,6 +50,14 @@ public class Theme implements Serializable {
         this.description = description;
     }
 
+    public List<Level> getLevel() {
+        return level;
+    }
+
+    public void setLevel(List<Level> level) {
+        this.level = level;
+    }
+
     @OneToMany
     private List<Level> level;
 
