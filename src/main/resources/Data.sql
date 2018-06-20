@@ -79,15 +79,6 @@ Exceptions - 「する」 devient 「できる」 et 「くる」 devient 「こ
 もう信じられない。- Déjà ? Je ne peux le croire.');
 
 
-INSERT INTO chapter_lesson(chapter_id) ALTER TABLE chapter_lesson ADD CONSTRAINT lessonfk FOREIGN KEY (lesson)
-VALUES(1,1);
-/*
-(2,2),
-(3,2),
-(4,2),
-(5,2);*/
-
-
 INSERT INTO level (ID, NAME)
 VALUES(1, 'Debutant'),
 (2, 'Intermediaire'),

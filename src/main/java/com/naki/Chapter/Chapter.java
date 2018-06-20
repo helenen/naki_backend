@@ -49,21 +49,22 @@ public class Chapter implements Serializable {
         this.exemple = exemple;
     }
 
-    public List<Lesson> getLesson() {
+    public Lesson getLesson() {
         return lesson;
     }
 
-    public void setLesson(List<Lesson> lesson) {
+    public void setLesson(Lesson lesson) {
         this.lesson = lesson;
     }
 
     @ManyToOne
     private Exercise exercise ;
 
-    @OneToMany
-    private List<Lesson> lesson;
+    @OneToOne(targetEntity = Lesson.class)
+    private Lesson lesson;
 
     public Chapter() {};
+
 
     public Chapter(long id, String title, String text, String exemple) {
         this.id = id;

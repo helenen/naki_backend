@@ -32,8 +32,8 @@ public class Lesson implements Serializable {
 
     public Lesson(){};
 
-    @ManyToOne
-    private Chapter chapter;
+    @OneToMany(targetEntity = Chapter.class)
+    private List<Chapter> chapter;
 
     public Lesson (long id, String name){
         this.id = id;
