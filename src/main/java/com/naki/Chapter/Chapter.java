@@ -60,7 +60,7 @@ public class Chapter implements Serializable {
     @ManyToOne
     private Exercise exercise ;
 
-    @OneToOne(targetEntity = Lesson.class)
+    @ManyToOne
     private Lesson lesson;
 
     public Chapter() {};

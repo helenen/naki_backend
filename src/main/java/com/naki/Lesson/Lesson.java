@@ -22,6 +22,17 @@ public class Lesson implements Serializable {
     @Column(name = "name")
     private String name;
 
+    public List<Chapter> getChapters() {
+        return chapters;
+    }
+
+    public void setChapters(List<Chapter> chapters) {
+        this.chapters = chapters;
+    }
+
+    @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson")
+    private List<Chapter> chapters;
+
     public Long getId(){ return id;}
 
     public String getName(){ return name;}
@@ -32,9 +43,7 @@ public class Lesson implements Serializable {
 
     public Lesson(){};
 
-    @OneToMany(targetEntity = Chapter.class)
-    private List<Chapter> chapter;
-
+    //chapter manytoone
     public Lesson (long id, String name){
         this.id = id;
         this.name = name;
