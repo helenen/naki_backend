@@ -1,12 +1,10 @@
-package com.naki.Nomber;
+package com.naki.Number;
 
 import com.naki.Category.Category;
 import com.naki.Exercise.Exercise;
-import com.naki.Theme.Theme;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table(name = "number", schema ="public")

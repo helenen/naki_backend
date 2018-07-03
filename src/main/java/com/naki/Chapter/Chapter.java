@@ -1,11 +1,10 @@
 package com.naki.Chapter;
 
-import com.naki.Cours.Cours;
 import com.naki.Exercise.Exercise;
+import com.naki.Lesson.Lesson;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -50,21 +49,22 @@ public class Chapter implements Serializable {
         this.exemple = exemple;
     }
 
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
+
     @ManyToOne
     private Exercise exercise ;
 
-    public Cours getCours() {
-        return cours;
-    }
-
-    public void setCours(Cours cours) {
-        this.cours = cours;
-    }
-
     @ManyToOne
-    private Cours cours;
+    private Lesson lesson;
 
     public Chapter() {};
+
 
     public Chapter(long id, String title, String text, String exemple) {
         this.id = id;
