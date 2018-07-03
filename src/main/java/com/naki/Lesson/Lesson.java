@@ -1,14 +1,11 @@
 package com.naki.Lesson;
 
 
-import com.naki.Asset.Asset;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.naki.Chapter.Chapter;
-import com.naki.Exercise.Exercise;
-import com.naki.Theme.Theme;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,7 +18,6 @@ public class Lesson implements Serializable {
 
     @Column(name = "name")
     private String name;
-
     public List<Chapter> getChapters() {
         return chapters;
     }
@@ -31,6 +27,7 @@ public class Lesson implements Serializable {
     }
 
     @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson")
+    @JsonIgnore
     private List<Chapter> chapters;
 
     public Long getId(){ return id;}

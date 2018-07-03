@@ -6,13 +6,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class LessonService {
+public interface LessonService {
 
-    @Autowired(required=true)
-    private LessonRepository lessonRepository;
+    List<Lesson> listAllLessons();
 
-    public List<Lesson> listAllLessons() {
-        System.out.println("Before finding all lessons");
-        return lessonRepository.findAll();
-    }
+    Lesson findById(Long id);
+
 }

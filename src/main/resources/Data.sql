@@ -42,12 +42,12 @@ VALUES(1,'Introduction aux particules （は、も、が)'),
 (2, 'La forme pour exprimer le potentiel'),
 (3,'Exprimer différents niveaux de certitude');
 
-INSERT INTO chapter(ID,TITLE, TEXT, EXEMPLE)
+INSERT INTO chapter(ID,TITLE, TEXT, EXEMPLE, lesson_id)
 VALUES(1,'Définir les fonctions grammaticales avec les particules','Nous allons maintenant faire bon usage de ce que nous venons d&apos;apprendre en associant un nom à un autre nom.
 Ceci peut être réalisé à l&apos;aide de ce que l&apos;on appelle des particules.
 Les particules, formées de un ou deux caractères hiragana, s&apos;ajoutent à la fin d&apos;un mot pour définir quelle fonction grammaticale il remplit dans la phrase.
 Employer les bonnes particules est très important car la signification d&apos;une phrase peut en être radicalement changé.
-Par exemple, la phrase "manger du poisson." peut devenir "le poisson mange." simplement en changeant une particule.', null),
+Par exemple, la phrase "manger du poisson." peut devenir "le poisson mange." simplement en changeant une particule.', null, 1),
 (2, 'La particule de thème 「は', 'La première particule que nous apprendrons est la particule de thème.
 La particule de thème permet de montrer de quoi vous êtes en train de parler ou plus simplement, le thème de la phrase. Par exemple, une personne nous dit : "pas étudiant."
 Bien que nous n&apos;ayons pas beaucoup d&apos;informations supplémentaires sur cette phrase à cause du manque de connaissance de son contexte, cette phrase sera parfaitement correcte en japonais.
@@ -55,7 +55,7 @@ Cette particule nous permet donc d&apos;exprimer de quoi notre phrase va parler.
 Dans cet exemple, Bob indique que sa question concerne Alice. On remarquera que malgré le fait que 「だ」 n&apos;ait pas été employé, la traduction française utilise tout de même le verbe être : "es" et "suis".
 De plus, comme nous savons que le thème de la question est Alice, nous n&apos;avons besoin de rien d&apos;autre pour deviner qu&apos;Alice est une étudiante.
 En fait, puisque Bob pose une question, il ne peut pas ajouter 「だ」 car dans ce cas, il affirmerait une chose tout en posant une question dessus.', 'ボブ：　アリスは学生？- Alice, es-tu étudiante?
-アリス：　うん、学生。- Ouais, je le suis.'),
+アリス：　うん、学生。- Ouais, je le suis.',3),
 (3, 'La particule inclusive de thème 「も','C&apos;est une particule qui est très semblable à la particule de thème.
 Elle a le sens additionnel d&apos;"aussi".
 Elle peut ainsi introduire un autre thème en plus du thème courant. La caractère 「も」 est utilisé pour désigner la particule inclusive. Voici des exemples pour mieux comprendre son utilisation.
@@ -63,9 +63,9 @@ Notez qu&apos;Alice doit être inclue. Cela n’aurait aucun sens de dire, "je s
 Sinon, Alice emploierait la particule は pour retirer la signification additionnelle comme dans le prochain exemple.','ボブ：　アリスは学生？- Alice, es-tu étudiante?
 アリス：　うん、トムも学生。- Ouais, et Tom l&apos;est aussi étudiant.ボブ：　アリスは学生？- Alice, es-tu étudiante?
 アリス：　うん、でもトムは学生じゃない。- Ouais, mais Tom n&apos;est pas étudiant.ボブ：　アリスは学生？- Alice, es-tu étudiante?
-アリス：　ううん、トムも学生じゃない。- Non, et Tom n&apos;est pas étudiant non plus.'),
+アリス：　ううん、トムも学生じゃない。- Non, et Tom n&apos;est pas étudiant non plus.',1),
 (4, 'Exprimer la capacité de faire quelque chose', 'En japonais, la capacité de faire certaines actions est exprimée en conjugant le verbe plutôt qu&apos;en ajoutant un mot comme en français "pouvoir" ou "être capable".
-Tous les verbes, une fois conjugués dans leur forme potentielle, deviennent un verbe-ru.', null),
+Tous les verbes, une fois conjugués dans leur forme potentielle, deviennent un verbe-ru.', null,3),
 (5, 'La forme potentielle', 'Encore une fois, les règles peuvent se diviser en deux groupes principaux : les verbes-ru et les verbes-u.
 La forme potentielle du verbe 「する」 (qui veut dire "faire") est un cas spécial car il devient un tout autre verbe : 「できる」 （出来る.
 Certains ajouterons parfois 「れる」 à la place de 「られる」 pour les verbes-ru. Par exemple, 「食べる」 devient 「食べれる」 à la place de 「食べられる」.
@@ -76,7 +76,7 @@ verbes-u - Changer le dernier caractère d&apos;une voyelle / u / en son équiva
 （例）　遊ぶ → 遊べ → 遊べる
 Exceptions - 「する」 devient 「できる」 et 「くる」 devient 「こられる」. 漢字は書けますか？- Peux-tu écrire des Kanji?
 残念だが、今週末は行けない。- Malheureusement, je ne peux pas aller ce week-end.
-もう信じられない。- Déjà ? Je ne peux le croire.');
+もう信じられない。- Déjà ? Je ne peux le croire.',2);
 
 
 INSERT INTO level (ID, NAME)

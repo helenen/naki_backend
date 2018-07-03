@@ -9,4 +9,5 @@ import java.util.List;
 public interface LessonRepository extends CrudRepository<Lesson, Long> {
 
     List<Lesson> findAll();
+    Lesson findOne(Long id);
 }

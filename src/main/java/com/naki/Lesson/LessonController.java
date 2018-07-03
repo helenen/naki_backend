@@ -1,9 +1,9 @@
 package com.naki.Lesson;
 
+import com.naki.Chapter.Chapter;
+import com.naki.Chapter.ChapterDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,4 +19,7 @@ public class LessonController {
     public List<Lesson> getAllLessons() {
         return lessonService.listAllLessons();
     }
+
+    @GetMapping("/lessons/{id}")
+    public List<Chapter> getChapterId(@PathVariable Long id){ return lessonService.findById(id).getChapters(); }
 }
