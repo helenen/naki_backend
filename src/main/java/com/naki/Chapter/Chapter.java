@@ -12,7 +12,7 @@ import java.util.List;
 public class Chapter implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "title")
@@ -57,10 +57,10 @@ public class Chapter implements Serializable {
         this.lesson = lesson;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise ;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Lesson lesson;
 
     public Chapter() {};

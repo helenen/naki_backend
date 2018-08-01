@@ -1,5 +1,6 @@
 package com.naki.Lesson;
 
+import com.naki.Chapter.Chapter;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,4 +11,5 @@ public interface LessonRepository extends CrudRepository<Lesson, Long> {
 
     List<Lesson> findAll();
     Lesson findOne(Long id);
+
 }

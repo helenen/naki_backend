@@ -1,4 +1,4 @@
-package com.naki.Asset;
+package com.naki.Theme;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,16 +9,15 @@ import java.util.List;
 
 @RequestMapping("/api")
 @RestController
-public class AssetController {
-
+public class ThemeController {
 
     @Autowired
-    private AssetService assetService;
+    private ThemeService themeService;
 
 
-    @GetMapping("/assets")
-    public List<Asset> getAllAssets() {
-        return assetService.listAllAssets();
+    @GetMapping("/themes")
+    public List<Theme> getAllThemes() {
+        return themeService.listAllThemes();
     }
-
 }
+

@@ -17,7 +17,7 @@ import java.util.List;
 public class Theme implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -58,23 +58,25 @@ public class Theme implements Serializable {
         this.level = level;
     }
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.REMOVE)
     private List<Level> level;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Lesson lesson;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Vocabulary vocabulary;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Number nomber;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Verb verb;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Dialogue dialogue;
+
+    public Theme(){};
 
     public Theme(String name, String description) {
         this.name = name;

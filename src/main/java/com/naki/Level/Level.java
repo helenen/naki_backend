@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Level implements Serializable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -30,6 +30,8 @@ public class Level implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+
+    public Level(){};
 
     public Level(String name) {
         this.name = name;

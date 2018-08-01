@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Number implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -44,10 +44,10 @@ public class Number implements Serializable {
         this.romaji = romaji;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise;
 
     public Number(long id, String name, String romaji) {

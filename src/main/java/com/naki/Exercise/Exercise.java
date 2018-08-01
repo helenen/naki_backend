@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Exercise implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "question_asset_item")
@@ -32,7 +32,7 @@ public class Exercise implements Serializable {
     @Column(name = "exercise_order")
     private int exercise_order;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Asset asset;
 
     public Long getId(){ return id; }

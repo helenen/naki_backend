@@ -14,7 +14,7 @@ public class Vocabulary implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -47,10 +47,10 @@ public class Vocabulary implements Serializable {
         this.romaji = romaji;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise;
 
     public Vocabulary(long id, String name) {

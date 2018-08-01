@@ -1,4 +1,4 @@
-package com.naki.Asset;
+package com.naki.Level;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,16 +9,14 @@ import java.util.List;
 
 @RequestMapping("/api")
 @RestController
-public class AssetController {
-
+public class LevelController {
 
     @Autowired
-    private AssetService assetService;
+    private LevelService levelService;
 
 
-    @GetMapping("/assets")
-    public List<Asset> getAllAssets() {
-        return assetService.listAllAssets();
+    @GetMapping("/levels")
+    public List<Level> getAllLessons() {
+        return levelService.listAllLevels();
     }
-
 }
