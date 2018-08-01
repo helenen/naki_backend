@@ -12,7 +12,7 @@ import java.util.List;
 public class Verb implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -34,10 +34,10 @@ public class Verb implements Serializable {
         this.name = name;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise;
 
 

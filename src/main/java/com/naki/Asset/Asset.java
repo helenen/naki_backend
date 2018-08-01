@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Asset implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "type")
@@ -39,7 +39,7 @@ public class Asset implements Serializable {
 
     public Integer setAssetOrder(){ return asset_order;}
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
 
     public Asset(){};

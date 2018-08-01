@@ -13,11 +13,12 @@ import java.util.List;
 public class Lesson implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
     private String name;
+
     public List<Chapter> getChapters() {
         return chapters;
     }
@@ -26,7 +27,7 @@ public class Lesson implements Serializable {
         this.chapters = chapters;
     }
 
-    @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson")
+    @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson",cascade = CascadeType.REMOVE)
     @JsonIgnore
     private List<Chapter> chapters;
 
@@ -45,5 +46,6 @@ public class Lesson implements Serializable {
         this.id = id;
         this.name = name;
     }
+
 }
 

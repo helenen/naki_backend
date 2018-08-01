@@ -13,7 +13,7 @@ public class Dialogue implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name = "name")
@@ -35,7 +35,7 @@ public class Dialogue implements Serializable {
         this.name = name;
     }
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise;
 
     public Dialogue(long id, String name) {

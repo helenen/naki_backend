@@ -1,5 +1,7 @@
 package com.naki.Lesson;
 
+import com.naki.Chapter.Chapter;
+
 import java.io.Serializable;
 import java.util.List;
 
