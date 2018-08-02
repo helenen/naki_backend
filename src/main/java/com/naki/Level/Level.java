@@ -1,6 +1,11 @@
 package com.naki.Level;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.naki.Lesson.Lesson;
+import com.naki.Theme.Theme;
+
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 
@@ -15,6 +20,13 @@ public class Level implements Serializable{
     @Column(name = "name")
     private String name;
 
+    @OneToMany(targetEntity = Lesson.class, mappedBy = "level",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Lesson> lessons;
+
+    public List<Lesson> getLessons() {
+        return lessons;
+    }
     public long getId() {
         return id;
     }
@@ -30,6 +42,8 @@ public class Level implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
+
+
 
     public Level(){};
 

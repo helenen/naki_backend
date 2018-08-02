@@ -1,5 +1,6 @@
 package com.naki.Theme;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.naki.Lesson.Lesson;
 import com.naki.Vocabulary.Vocabulary;
 import com.naki.Dialogue.Dialogue;
@@ -50,16 +51,8 @@ public class Theme implements Serializable {
         this.description = description;
     }
 
-    public List<Level> getLevel() {
-        return level;
-    }
-
-    public void setLevel(List<Level> level) {
-        this.level = level;
-    }
-
-    @OneToMany(cascade = CascadeType.REMOVE)
-    private List<Level> level;
+    //@ManyToOne(cascade = CascadeType.REMOVE)
+   // private Level level;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Lesson lesson;

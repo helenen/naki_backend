@@ -3,6 +3,7 @@ package com.naki.Lesson;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.naki.Chapter.Chapter;
+import com.naki.Level.Level;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -19,6 +20,13 @@ public class Lesson implements Serializable {
     @Column(name = "name")
     private String name;
 
+    @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Chapter> chapters;
+
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private Level level;
+
     public List<Chapter> getChapters() {
         return chapters;
     }
@@ -27,9 +35,11 @@ public class Lesson implements Serializable {
         this.chapters = chapters;
     }
 
-    @OneToMany(targetEntity = Chapter.class, mappedBy = "lesson",cascade = CascadeType.REMOVE)
-    @JsonIgnore
-    private List<Chapter> chapters;
+    public Level getLevels(){
+        return levels;
+    }
+
+    private Level levels;
 
     public Long getId(){ return id;}
 

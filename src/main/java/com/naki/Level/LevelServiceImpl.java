@@ -18,4 +18,9 @@ public class LevelServiceImpl implements LevelService {
 
     }
 
+    @Override
+    public Level findById(Long id){
+        return levelRepository.findOne(id);
+    }
+
 }
