@@ -37,8 +37,11 @@ VALUES('Debutant'),
 
 INSERT INTO lesson (NAME, level_id)
 VALUES('Introduction aux particules （は、も、が)', 1),
+('poulou1', 1),
 ('La forme pour exprimer le potentiel', 2),
-('Exprimer différents niveaux de certitude', 3);
+('poulou2',2),
+('Exprimer différents niveaux de certitude', 3),
+('poulou3',3);
 
 INSERT INTO chapter(TITLE, TEXT, EXEMPLE, lesson_id)
 VALUES('Définir les fonctions grammaticales avec les particules','Nous allons maintenant faire bon usage de ce que nous venons d apprendre en associant un nom à un autre nom.

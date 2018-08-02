@@ -35,11 +35,6 @@ public class Lesson implements Serializable {
         this.chapters = chapters;
     }
 
-    public Level getLevels(){
-        return levels;
-    }
-
-    private Level levels;
 
     public Long getId(){ return id;}
 
