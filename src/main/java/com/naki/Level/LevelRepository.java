@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface LevelRepository extends CrudRepository<Level, Long> {
     List<Level> findAll();
+    Level findOne(Long id);
 }

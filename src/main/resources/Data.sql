@@ -12,10 +12,7 @@ VALUES('lesson'),
 ('mois'),
 ('jour du mois');
 
-INSERT INTO theme (NAME, DESCRIPTION)
-VALUES('Vocabulaire', 'vocabulaire'),
-('Grammaire', 'Grammaire'),
-('Dialogue', 'Dialogue');
+
 
 
 INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER)
@@ -33,11 +30,18 @@ INSERT INTO number(NAME,ROMAJI, exercise_id)
 VALUES('一つ','hitotsu', 1),
 ('二つ','hitotsu', 2);
 
+INSERT INTO level (NAME)
+VALUES('Debutant'),
+('Intermediaire'),
+('Avancé');
 
-INSERT INTO lesson (NAME)
-VALUES('Introduction aux particules （は、も、が)'),
-('La forme pour exprimer le potentiel'),
-('Exprimer différents niveaux de certitude');
+INSERT INTO lesson (NAME, level_id)
+VALUES('Introduction aux particules （は、も、が)', 1),
+('poulou1', 1),
+('La forme pour exprimer le potentiel', 2),
+('poulou2',2),
+('Exprimer différents niveaux de certitude', 3),
+('poulou3',3);
 
 INSERT INTO chapter(TITLE, TEXT, EXEMPLE, lesson_id)
 VALUES('Définir les fonctions grammaticales avec les particules','Nous allons maintenant faire bon usage de ce que nous venons d apprendre en associant un nom à un autre nom.
@@ -76,10 +80,12 @@ Exceptions - 「する」 devient 「できる」 et 「くる」 devient 「こ
 もう信じられない。- Déjà ? Je ne peux le croire.',2);
 
 
-INSERT INTO level (NAME)
-VALUES('Debutant'),
-('Intermediaire'),
-('Avancé');
+
+
+INSERT INTO theme (NAME, DESCRIPTION)
+VALUES('Vocabulaire', 'vocabulaire'),
+('Grammaire', 'Grammaire'),
+('Dialogue', 'Dialogue');
 
 INSERT INTO asset (type, value, asset_order)
 VALUES('sound','https://drive.google.com/open?id=1nL2KxYCiug5bH6hJ-Plo6zSv2oJFG3N8', 1);
