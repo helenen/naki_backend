@@ -9,4 +9,5 @@ public interface LevelService {
 
     List<Level> listAllLevels();
     Level findById(Long id);
+   // Level findByLevelId(Long id);
 }

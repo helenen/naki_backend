@@ -2,6 +2,7 @@ package com.naki.Lesson;
 
 import com.naki.Chapter.Chapter;
 import com.naki.Chapter.ChapterDTO;
+import com.naki.Level.Level;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,8 @@ public class LessonController {
         return lessonService.listAllLessons();
     }
 
-    @GetMapping("/lessons/{id}")
+    @GetMapping("/lesson/{id}")
     public List<Chapter> getChapter(@PathVariable Long id){ return lessonService.findById(id).getChapters(); }
+
+
 }

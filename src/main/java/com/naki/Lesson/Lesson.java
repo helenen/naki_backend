@@ -35,6 +35,7 @@ public class Lesson implements Serializable {
         this.chapters = chapters;
     }
 
+    public Level getLevel(){ return level;}
 
     public Long getId(){ return id;}
 

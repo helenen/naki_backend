@@ -1,6 +1,7 @@
 package com.naki.Lesson;
 
 import com.naki.Chapter.Chapter;
+import com.naki.Level.Level;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
