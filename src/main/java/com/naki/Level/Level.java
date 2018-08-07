@@ -27,6 +27,7 @@ public class Level implements Serializable{
     public List<Lesson> getLessons() {
         return lessons;
     }
+
     public long getId() {
         return id;
     }
@@ -51,4 +52,5 @@ public class Level implements Serializable{
         this.name = name;
 
     }
+
 }

@@ -27,4 +27,7 @@ public class LevelController {
     public List<Lesson> getLessonById(@PathVariable Long id){
         return levelService.findById(id).getLessons();
     }
+
+    @GetMapping("/level/{id}/lesson")
+    public List<Lesson> getLessonsByLevel(@PathVariable Long id){ return levelService.findById(id).getLessons();}
 }

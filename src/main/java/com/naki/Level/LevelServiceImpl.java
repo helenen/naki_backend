@@ -23,4 +23,6 @@ public class LevelServiceImpl implements LevelService {
         return levelRepository.findOne(id);
     }
 
+    //@Override
+    //public Level findByLevelId(Long id){ return levelRepository.findOne(id); }
 }

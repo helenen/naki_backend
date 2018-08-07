@@ -2,6 +2,7 @@ package com.naki.Chapter;
 
 import com.naki.Exercise.Exercise;
 import com.naki.Lesson.Lesson;
+import com.naki.Text.Text;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,12 +19,11 @@ public class Chapter implements Serializable {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "text", length=10000)
-    private String text;
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private Exercise exercise ;
 
-    @Column(name = "exemple", length=10000)
-    private String exemple;
-
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private Lesson lesson;
 
     public String getTitle() {
         return title;
@@ -31,22 +31,6 @@ public class Chapter implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public String getExemple() {
-        return exemple;
-    }
-
-    public void setExemple(String exemple) {
-        this.exemple = exemple;
     }
 
     public Lesson getLesson() {
@@ -57,19 +41,11 @@ public class Chapter implements Serializable {
         this.lesson = lesson;
     }
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
-    private Exercise exercise ;
-
-    @ManyToOne(cascade = CascadeType.REMOVE)
-    private Lesson lesson;
-
     public Chapter() {};
 
 
-    public Chapter(long id, String title, String text, String exemple) {
+    public Chapter(long id, String title) {
         this.id = id;
         this.title = title;
-        this.text = text;
-        this.exemple = exemple;
     }
 }
