@@ -12,6 +12,8 @@ public class TextDTO implements Serializable {
 
     private String exemple;
 
+
+
     private Chapter chapter;
 
     public long getId() {
@@ -40,5 +42,9 @@ public class TextDTO implements Serializable {
 
     public Chapter getChapter() {
         return chapter;
+    }
+
+    public void setChapter(Chapter chapter) {
+        this.chapter = chapter;
     }
 }

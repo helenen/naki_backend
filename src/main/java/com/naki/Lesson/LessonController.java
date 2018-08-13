@@ -21,8 +21,9 @@ public class LessonController {
         return lessonService.listAllLessons();
     }
 
-    @GetMapping("/lesson/{id}")
+    @GetMapping("/lesson/{id}/chapters")
     public List<Chapter> getChapter(@PathVariable Long id){ return lessonService.findById(id).getChapters(); }
+
 
 
 }

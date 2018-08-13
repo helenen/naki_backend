@@ -8,4 +8,6 @@ import java.util.List;
 public interface TextService {
 
     List<Text> listAllTexts();
+
+    Text findById(Long id);
 }

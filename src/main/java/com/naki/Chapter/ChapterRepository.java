@@ -9,4 +9,6 @@ import java.util.List;
 public interface ChapterRepository extends CrudRepository<Chapter, Long> {
 
     List<Chapter> findAll();
+
+    Chapter findOne(Long id);
 }

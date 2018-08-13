@@ -19,10 +19,8 @@ public class Text implements Serializable {
     @Column(name = "exemple", length=10000)
     private String exemple;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Chapter chapter;
-
-
 
     public long getId() {
         return id;
@@ -51,6 +49,11 @@ public class Text implements Serializable {
     public Chapter getChapter() {
         return chapter;
     }
+
+    public void setChapter(Chapter chapter) {
+        this.chapter = chapter;
+    }
+
     public Text() {};
 
 
