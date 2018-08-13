@@ -28,19 +28,18 @@ public class ChapterDTO implements Serializable {
         this.title = title;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public String getExemple() {
         return exemple;
     }
 
     public void setExemple(String exemple) {
         this.exemple = exemple;
+    }
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

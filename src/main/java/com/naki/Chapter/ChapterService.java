@@ -6,13 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ChapterService {
+public interface ChapterService {
 
-    @Autowired(required=true)
-    private ChapterRepository chapterRepository;
-
-    public List<Chapter> listAllChapters() {
-        System.out.println("Before finding all chapter");
-        return chapterRepository.findAll();
-    }
+    List<Chapter> listAllChapters();
+    Chapter  findById(Long id);
 }

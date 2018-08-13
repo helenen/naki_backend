@@ -1,5 +1,6 @@
 package com.naki.Chapter;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.naki.Exercise.Exercise;
 import com.naki.Lesson.Lesson;
 import com.naki.Text.Text;
@@ -25,6 +26,10 @@ public class Chapter implements Serializable {
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Lesson lesson;
 
+    @OneToMany(targetEntity = Text.class, mappedBy = "chapter",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Text> text;
+
     public String getTitle() {
         return title;
     }
@@ -32,6 +37,8 @@ public class Chapter implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public List<Text> getText(){ return  text;}
 
     public Lesson getLesson() {
         return lesson;

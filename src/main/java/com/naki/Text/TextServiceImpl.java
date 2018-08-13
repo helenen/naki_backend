@@ -18,4 +18,9 @@ public class TextServiceImpl implements TextService{
         return textRepository.findAll();
 
     }
+
+    @Override
+    public Text findById(Long id){
+        return textRepository.findOne(id);
+    }
 }
