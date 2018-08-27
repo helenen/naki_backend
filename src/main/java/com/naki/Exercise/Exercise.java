@@ -1,6 +1,6 @@
 package com.naki.Exercise;
 
-import com.naki.Asset.Asset;
+import com.naki.Chapter.Chapter;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -33,7 +33,15 @@ public class Exercise implements Serializable {
     private int exercise_order;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
-    private Asset asset;
+    private Chapter chapter;
+
+    public void setChapter(Chapter chapter) {
+        this.chapter = chapter;
+    }
+
+    public Chapter getChapter() {
+        return chapter;
+    }
 
     public Long getId(){ return id; }
 

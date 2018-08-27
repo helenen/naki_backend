@@ -1,18 +1,16 @@
 package com.naki.Exercise;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ExerciseService {
+public interface ExerciseService {
 
-    @Autowired
-    private ExerciseRepository exerciseRepository;
+    Exercise findById(Long id);
 
-    public List<Exercise> listAllExercises() {
-        System.out.println("Before finding all exercise");
-        return exerciseRepository.findAll();
-    }
+    List<Exercise> listAllExercises();
+
 }

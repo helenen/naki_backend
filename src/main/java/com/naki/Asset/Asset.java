@@ -1,6 +1,7 @@
 package com.naki.Asset;
 
 import com.naki.Category.Category;
+import com.naki.Exercise.Exercise;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -41,6 +42,9 @@ public class Asset implements Serializable {
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
+
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    private Exercise exercise;
 
     public Asset(){};
     public Asset(String type, String value, int asset_order) {

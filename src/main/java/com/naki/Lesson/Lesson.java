@@ -4,6 +4,7 @@ package com.naki.Lesson;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.naki.Chapter.Chapter;
 import com.naki.Level.Level;
+import com.naki.Text.Text;
 
 import javax.persistence.*;
 import java.io.Serializable;

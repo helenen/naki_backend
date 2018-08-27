@@ -20,8 +20,6 @@ public class Chapter implements Serializable {
     @Column(name = "title")
     private String title;
 
-    @ManyToOne(cascade = CascadeType.REMOVE)
-    private Exercise exercise ;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Lesson lesson;
@@ -38,7 +36,23 @@ public class Chapter implements Serializable {
         this.title = title;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public List<Text> getText(){ return  text;}
+
+    @OneToMany(targetEntity = Exercise.class, mappedBy = "chapter",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Exercise> exercise;
+
+    public List<Exercise> getExercise(){ return exercise;}
+
+
 
     public Lesson getLesson() {
         return lesson;
@@ -55,4 +69,6 @@ public class Chapter implements Serializable {
         this.id = id;
         this.title = title;
     }
+
+
 }
