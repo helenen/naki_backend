@@ -12,28 +12,11 @@ VALUES('lesson'),
 ('mois'),
 ('jour du mois');
 
-
-
-
-INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER)
-VALUES('学校_どこ？', 'は','それ','も','が', 1),
-('これ_何？','は','も','どれ','が', 2),
-('ここ_図書館だ', 'が','どれ','も','は', 3);
-/*(4, 'Forme déclarative', 'これだ', 4),
-(5, 'Forme déclarative', 'これだ','', 5),
-(6, 'Forme déclarative', 'これだ','', 6);*/
-
-INSERT INTO vocabulary(NAME, ROMAJI,  exercise_id)
-VALUES('家','ie', 1);
-
-INSERT INTO number(NAME,ROMAJI, exercise_id)
-VALUES('一つ','hitotsu', 1),
-('二つ','hitotsu', 2);
-
 INSERT INTO level (NAME)
 VALUES('Debutant'),
 ('Intermediaire'),
 ('Avancé');
+
 
 INSERT INTO lesson (NAME, level_id)
 VALUES('Introduction aux particules （は、も、が)', 1),
@@ -43,13 +26,13 @@ VALUES('Introduction aux particules （は、も、が)', 1),
 ('lesson2',2),
 ('lesson3',3);
 
-INSERT INTO chapter(TITLE,lesson_id)
+INSERT INTO chapter (TITLE,lesson_id)
 VALUES('Définir les fonctions grammaticales avec les particules',1),
 ('La particule de thème 「は',1),
 ('Exprimer la capacité de faire quelque chose',2),
 ('La forme potentielle',2),
 ('Les formes potentielles n ont pas d objet',2),
-('Est-ce que 「見える」 and 「聞こえる」 sont des exceptions?',2),
+('Est-ce que 「見える」 et 「聞こえる」 sont des exceptions?',2),
 ('Exprimer différents degrés de certitude',3),
 ('Exprimer 「かもしれない」 pour exprimer l’incertitude',3),
 ('Utiliser 「でしょう」 pour exprimer une faible certitude (poli)',3);
@@ -95,7 +78,56 @@ Il y a aussi une version très masculine 「かもしれん」, qui est simpleme
 Tout comme 「～です／～ます」, il doit venir à la fin d’une phrase complète. Il n’a pas d’autre conjugaison.
  Vous pouvez aussi remplacer 「～ですか」 avec 「～でしょうか」 pour rendre la question légèrement plus polie et moins directe en ajoutant un léger niveau d’incertitude.','（１）　明日も雨でしょう。- Demain aussi il pleut (peut-être).
 （２）　あなたは、学生さんでしょうか。- Seriez-vous l‘étudiant?
-（３）　これからどこへ行くんでしょうか？- Par où iriez vous d’ici?', 9);
+（３）　これからどこへ行くんでしょうか？- Par où iriez vous d’ici?', 9),
+('En japonais, la capacité de faire une certaine action sexprime en conjuguant le verbe plutôt quen ajoutant un mot tel que les mots «peut» ou «capable de» dans le cas de langlais.
+ Tous les verbes conjugués à la forme potentielle deviennent un verbe en ru.',null , 3),
+('Encore une fois, les règles de conjugaison peuvent être divisées en trois groupes principaux: verbes-ru, verbes-u et verbes dexception.
+Cependant, la forme potentielle du verbe 「す る meaning (signifiant« faire ») est une exception particulière car elle devient un verbe complètement différent:「 で き る 」(出来 る)', '
+Règles de création de forme potentielle
+Pour les verbes ru: Remplacez le 「る」 par 「ら れ る」.
+Exemple: る る → 見 ら れ る
+Pour les verbes u: Modifiez le dernier caractère dun son / u / voyelle en son équivalent / e / voyelle et ajoutez 「る」.
+Exemple: ぶ ぶ → 遊 べ → 遊 べ る
+Des exceptions:
+」す る」 devient 「で き る」
+」く る」 devient 「こ ら れ る」
+※ Rappelez-vous que tous les verbes potentiels deviennent des verbes-ru.',4),
+('La forme potentielle indique que quelque chose est possible mais aucune action réelle nest réellement prise.
+ Bien que la forme potentielle soit toujours un verbe, car elle décrit l’état de faisabilité, en général, vous ne voulez pas utiliser l’objet direct 「を」 comme vous le feriez avec la forme non potentielle du verbe.
+ Par exemple, les phrases suivantes ne semblent pas naturelles.','富士山を登れた。
+重い荷物を持てます。', 5),
+('Il y a deux verbes 「見 え る」 et 「聞 こ え る mean qui signifient que quelque chose est visible et audible, respectivement.
+Lorsque vous voulez dire que vous pouvez voir ou entendre quelque chose, vous voudrez utiliser ces verbes.
+Si, toutefois, vous vouliez dire que vous avez eu loccasion de voir ou dentendre quelque chose, vous utiliseriez la forme potentielle habituelle.
+Cependant, dans ce cas, il est plus courant dutiliser le type dexpression comme dans lexemple 3.','る は 晴 れ て, 富士山 が 見 え る.
+(Il) sest éclairci aujourdhui et Fuji-san est visible.
+た 達 の お か げ で, 映 画 は た だ で 見 ら れ.
+Grâce à (mon) ami, (I) a pu regarder le film gratuitement.
+た 達 の お か げ で, 映 画 を た だ で 見 た で.
+Grâce à (mon) ami, (I) a pu regarder le film gratuitement.',6);
+
+
+INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER, chapter_id)
+VALUES('学校_どこ？', 'は','それ','も','が', 1, 3),
+('これ_何？','は','も','どれ','が', 2, 4),
+('ここ_図書館だ', 'が','どれ','も','は', 3, 5);
+/*(4, 'Forme déclarative', 'これだ', 4),
+(5, 'Forme déclarative', 'これだ','', 5),
+(6, 'Forme déclarative', 'これだ','', 6);*/
+
+/*INSERT INTO chapter_exercise (chapter_id, exercise_id)
+VALUES(1,3),
+(2,2),
+(3,2);*/
+
+INSERT INTO vocabulary(NAME, ROMAJI,  exercise_id)
+VALUES('家','ie', 1);
+
+INSERT INTO number(NAME,ROMAJI, exercise_id)
+VALUES('一つ','hitotsu', 1),
+('二つ','hitotsu', 2);
+
+
 
 INSERT INTO theme (NAME, DESCRIPTION)
 VALUES('Vocabulaire', 'vocabulaire'),
