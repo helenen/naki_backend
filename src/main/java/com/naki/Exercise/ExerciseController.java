@@ -1,6 +1,7 @@
 package com.naki.Exercise;
 
 
+import com.naki.Asset.Asset;
 import com.naki.Chapter.Chapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,5 +23,8 @@ public class ExerciseController {
         return exerciseService.listAllExercises();
     }
 
-
+    @GetMapping("/exercise/{id}/assets")
+    public List<Asset> getAllAssetsByExercise( @PathVariable Long id) {
+        return exerciseService.findById(id).getAsset();
+    }
 }

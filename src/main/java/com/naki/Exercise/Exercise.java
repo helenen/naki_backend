@@ -1,9 +1,12 @@
 package com.naki.Exercise;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.naki.Asset.Asset;
 import com.naki.Chapter.Chapter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
@@ -37,6 +40,14 @@ public class Exercise implements Serializable {
 
     public void setChapter(Chapter chapter) {
         this.chapter = chapter;
+    }
+
+    @OneToMany(targetEntity = Asset.class, mappedBy = "exercise",cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    private List<Asset> asset;
+
+    public List<Asset> getAsset() {
+        return asset;
     }
 
     public Chapter getChapter() {

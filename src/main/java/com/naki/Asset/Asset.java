@@ -24,6 +24,10 @@ public class Asset implements Serializable {
     @Column(name = "asset_order")
     private int asset_order;
 
+
+    @Column(name = "transcription")
+    private String transcription;
+
     public Long getId(){ return id; }
 
     public String getType(){ return type;}
@@ -31,6 +35,10 @@ public class Asset implements Serializable {
     public String getValue(){ return value;}
 
     public Integer getAssetOrder(){ return asset_order;}
+
+    public String getTranscription() {
+        return transcription;
+    }
 
     public Long setId(){ return id;}
 
@@ -40,17 +48,23 @@ public class Asset implements Serializable {
 
     public Integer setAssetOrder(){ return asset_order;}
 
+    public void setTranscription(String transcription) {
+        this.transcription = transcription;
+    }
+
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Category category;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     private Exercise exercise;
 
+    public Exercise getExercise(){ return exercise;}
     public Asset(){};
-    public Asset(String type, String value, int asset_order) {
+    public Asset(String type, String value, int asset_order, String transcription) {
         this.type = type;
         this.value= value;
         this.asset_order= asset_order;
+        this.transcription = transcription;
 
     }
 }

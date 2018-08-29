@@ -12,6 +12,8 @@ public class AssetDTO implements Serializable {
 
     private int asset_order;
 
+    private String transcription;
+
     public Long getId(){
         return  id;
     }
@@ -35,5 +37,15 @@ public class AssetDTO implements Serializable {
     public String setValue(){ return value;}
 
     public Integer setAssetOrder(){ return asset_order;}
+
+    public String getTranscription() {
+        return transcription;
+    }
+
+    public void setTranscription(String transcription) {
+        this.transcription = transcription;
+    }
+
+
 }
 
