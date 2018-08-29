@@ -111,14 +111,8 @@ INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_I
 VALUES('学校_どこ？', 'は','それ','も','が', 1, 3),
 ('これ_何？','は','も','どれ','が', 2, 4),
 ('ここ_図書館だ', 'が','どれ','も','は', 3, 5);
-/*(4, 'Forme déclarative', 'これだ', 4),
-(5, 'Forme déclarative', 'これだ','', 5),
-(6, 'Forme déclarative', 'これだ','', 6);*/
 
-/*INSERT INTO chapter_exercise (chapter_id, exercise_id)
-VALUES(1,3),
-(2,2),
-(3,2);*/
+
 
 INSERT INTO vocabulary(NAME, ROMAJI,  exercise_id)
 VALUES('家','ie', 1);
@@ -134,6 +128,7 @@ VALUES('Vocabulaire', 'vocabulaire'),
 ('Grammaire', 'Grammaire'),
 ('Dialogue', 'Dialogue');
 
-INSERT INTO asset (type, value, asset_order)
-VALUES('sound','https://drive.google.com/open?id=1nL2KxYCiug5bH6hJ-Plo6zSv2oJFG3N8', 1);
+INSERT INTO asset (type, value, transcription, asset_order, exercise_id)
+VALUES('sound','https://res.cloudinary.com/helenen/video/upload/v1535447790/lion.mp3',null, 1, 1),
+('image', 'https://res.cloudinary.com/helenen/image/upload/v1535461637/Lion_d_Afrique.jpg','ライオン', 2,1);
 
