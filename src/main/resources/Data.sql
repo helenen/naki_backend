@@ -22,8 +22,8 @@ INSERT INTO lesson (NAME, level_id)
 VALUES('Introduction aux particules （は、も、が)', 1),
 ('La forme pour exprimer le potentiel', 2),
 ('Exprimer différents niveaux de certitude', 3),
-('lesson1', 1),
-('lesson2',2),
+('Notions de base sur les verbes', 1),
+('Utiliser する et なる avec la particule に （～[のよう]になる／する）',2),
 ('lesson3',3);
 
 INSERT INTO chapter (TITLE,lesson_id)
@@ -31,11 +31,18 @@ VALUES('Définir les fonctions grammaticales avec les particules',1),
 ('La particule de thème 「は',1),
 ('Exprimer la capacité de faire quelque chose',2),
 ('La forme potentielle',2),
-('Les formes potentielles n ont pas d objet',2),
+('Les formes potentielles n''ont pas d objet',2),
 ('Est-ce que 「見える」 et 「聞こえる」 sont des exceptions?',2),
 ('Exprimer différents degrés de certitude',3),
 ('Exprimer 「かもしれない」 pour exprimer l’incertitude',3),
-('Utiliser 「でしょう」 pour exprimer une faible certitude (poli)',3);
+('Utiliser 「でしょう」 pour exprimer une faible certitude (poli)',3),
+('Le rôle des verbes', 4 ),
+('Classer les verbes en -ru et en -u', 4),
+('Appendice des verbes en –u ("iru"/"eru")', 4),
+('Utiliser 「する」 et 「なる」 avec la particule 「に」', 5),
+('Utiliser 「なる」 and 「する」 pour les noms et les adjectifs-na', 5),
+('Utiliser 「なる」 avec les adjectifs-i', 5),
+('Utiliser 「なる」 et 「する」 avec les verbes',5);
 
 INSERT INTO text(TEXT, EXEMPLE, chapter_id)
 VALUES('Nous allons maintenant faire bon usage de ce que nous venons d apprendre en associant un nom à un autre nom.
@@ -104,7 +111,37 @@ Cependant, dans ce cas, il est plus courant dutiliser le type dexpression comme 
 た 達 の お か げ で, 映 画 は た だ で 見 ら れ.
 Grâce à (mon) ami, (I) a pu regarder le film gratuitement.
 た 達 の お か げ で, 映 画 を た だ で 見 た で.
-Grâce à (mon) ami, (I) a pu regarder le film gratuitement.',6);
+Grâce à (mon) ami, (I) a pu regarder le film gratuitement.',6),
+('Nous avons à ce jour appris comment décrire des noms de diverses manières avec dautres noms et adjectifs.
+Ceci nous donne une certaine puissance expressive. Cependant, nous ne pouvons pas encore exprimer dactions.
+Cest là que les verbes interviennent. Les verbes, en japonais, viennent toujours à la fin des propositions.
+Mais puisque nous navons pas encore appris comment créer plus dune proposition, il faudra que nimporte quelle phrase avec un verbe finisse avec ce verbe.
+Nous allons maintenant apprendre les deux catégories principales des verbes, qui nous permettront de définir de manière précise des règles de conjugaison.
+Avant de commencer, il y a une chose importante à garder à lesprit.',null,10 ),
+('Nous pouvons utiliser les verbes 「する」 et 「なる」 en conjonction avec la particule 「に」 pour différentes expressions très utiles.
+ Nous sommes habitués à utiliser la particule objet avec 「する」 puisque quelque chose est en général fait à quelque chose d''autre.
+ Nous verrons comment évolue la signification lorsque la particule est remplacée par 「に」.
+ Par contre, pour 「なる」, on utilise toujours la particule 「に」 car "devenir" n''est pas une action faite à quelque chose mais plutôt le but d''une transformation.
+  Le seul point de grammaire intéressant ici est d''utiliser 「なる」 avec les adjectifs-i et les verbes.',null, 13 ),
+('Comme expliqué précédemment, utiliser 「なる」 avec des noms et des adjectifs-na ne présente rien de neuf et agit exactement de la manière dont vous l''attendez.','（１）　彼の日本語が上手になった。- Il est devenu habile en japonais.
+（２）　私は医者になった。- Je suis devenu médecin.
+（３）　私は有名な人になる。- Je deviendrais une célébrité.', 13),
+('Pour les adjectifs, utilcd iser le verbe 「する」 avec la particule 「に」 est juste une révision de la leçon sur les adverbes. Cependant, pour les noms, lorsque vous utilisez le verbe 「する」 avec la particule 「に」, cela signifie que vous allez faire quelque chose pour tendre vers quelque chose. Cela change la signification de 「する」 qui veut maintenant dire "se décider pour [X]", "Choisir [X]".
+C''est une expression commune, entre autre, lorsque vous passez une commande sur le menu d''un restaurant.','（１）　私は、ハンバーガーとサラダにします。
+- Je prendrais l''hamburger et une salade. (lit: Je vais me décider pour l''hamburger et une salade.)
+（２）　他にいいものがたくさんあるけど、やっぱりこれにする。
+- Il y a beaucoup d''autres choses qui sont bonnes, mais, comme je le pensais, je vais me décider pour celle-ci.',13 ),
+('Si vous pensez que cette expression est étrange, pensez un peu à l''expression anglaise : "I''ll go with the hamburger.
+" Où diable partez-vous avec cet hamburger ?',null, 13),
+('Comme la particule 「に」 est une particule de but utilisée pour les noms, et par extension pour les adjectifs-na, nous devons utiliser autre chose pour montrer que quelque chose devient un adjectif-i.
+Comme "devenir" exprime un changment d''état, cela paraît logique de décrire ce processus en utilisant un adverbe.
+En fait, vous remarquerez que nous utilisons déjà un (une sorte de) adverbe de la section précédente en utilisant 「に」 avec les adjectifs-na.','（１）　去年から背が高くなったね。
+- Tu as grandi depuis l''an dernier, hein ?
+（２）　運動しているから、強くなる。
+- Je deviendrais plus fort car je m''exerce.
+（３）　勉強をたくさんしたから、頭がよくなった。
+- Comme j''ai beaucoup étudié, je suis devenu plus intelligent. (lit : tête est devenue mieux)',14 );
+
 
 
 INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER, chapter_id)
