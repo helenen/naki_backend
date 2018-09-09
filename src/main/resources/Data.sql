@@ -24,7 +24,8 @@ VALUES('Introduction aux particules （は、も、が)', 1),
 ('Exprimer différents niveaux de certitude', 3),
 ('Notions de base sur les verbes', 1),
 ('Utiliser する et なる avec la particule に （～[のよう]になる／する）',2),
-('lesson3',3);
+('Utiliser 方 et よる pour des comparaisons ou d’autres fonctions
+（より、の方、stem＋方、によって、によると）',3);
 
 INSERT INTO chapter (TITLE,lesson_id)
 VALUES('Définir les fonctions grammaticales avec les particules',1),
