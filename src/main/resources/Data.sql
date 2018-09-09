@@ -126,7 +126,7 @@ Avant de commencer, il y a une chose importante à garder à lesprit.',null,10 )
 ('Comme expliqué précédemment, utiliser 「なる」 avec des noms et des adjectifs-na ne présente rien de neuf et agit exactement de la manière dont vous l''attendez.','（１）　彼の日本語が上手になった。- Il est devenu habile en japonais.
 （２）　私は医者になった。- Je suis devenu médecin.
 （３）　私は有名な人になる。- Je deviendrais une célébrité.', 13),
-('Pour les adjectifs, utilcd iser le verbe 「する」 avec la particule 「に」 est juste une révision de la leçon sur les adverbes. Cependant, pour les noms, lorsque vous utilisez le verbe 「する」 avec la particule 「に」, cela signifie que vous allez faire quelque chose pour tendre vers quelque chose. Cela change la signification de 「する」 qui veut maintenant dire "se décider pour [X]", "Choisir [X]".
+('Pour les adjectifs, utilcd cd iser le verbe 「する」 avec la particule 「に」 est juste une révision de la leçon sur les adverbes. Cependant, pour les noms, lorsque vous utilisez le verbe 「する」 avec la particule 「に」, cela signifie que vous allez faire quelque chose pour tendre vers quelque chose. Cela change la signification de 「する」 qui veut maintenant dire "se décider pour [X]", "Choisir [X]".
 C''est une expression commune, entre autre, lorsque vous passez une commande sur le menu d''un restaurant.','（１）　私は、ハンバーガーとサラダにします。
 - Je prendrais l''hamburger et une salade. (lit: Je vais me décider pour l''hamburger et une salade.)
 （２）　他にいいものがたくさんあるけど、やっぱりこれにする。
@@ -147,7 +147,9 @@ En fait, vous remarquerez que nous utilisons déjà un (une sorte de) adverbe de
 INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER, chapter_id)
 VALUES('学校_どこ？', 'は','それ','も','が', 1, 3),
 ('これ_何？','は','も','どれ','が', 2, 4),
-('ここ_図書館だ', 'が','どれ','も','は', 3, 5);
+('ここ_図書館だ', 'が','どれ','も','は', 3, 5),
+('学校はどこ？','あそこで','こちらで','銀行の横です','美日間の横です',4,1),
+('これは何？','かぎ','ドア','くつ','コンピュータ',5,1);
 
 
 
@@ -166,6 +168,10 @@ VALUES('Vocabulaire', 'vocabulaire'),
 ('Dialogue', 'Dialogue');
 
 INSERT INTO asset (type, value, transcription, asset_order, exercise_id)
-VALUES('sound','https://res.cloudinary.com/helenen/video/upload/v1535447790/lion.mp3',null, 1, 1),
-('image', 'https://res.cloudinary.com/helenen/image/upload/v1535461637/Lion_d_Afrique.jpg','ライオン', 2,1);
+VALUES('sound','https://res.cloudinary.com/helenen/video/upload/v1536407552/%E3%81%82%E3%81%AE%E3%81%AF%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%84%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%E3%81%A6%E3%82%99%E3%81%99.mp3',null, 1, 1),
+('image', 'https://res.cloudinary.com/helenen/image/upload/v1535461637/Lion_d_Afrique.jpg','あのはおおきいライオンです。', 2,1),
+('sound', 'https://res.cloudinary.com/helenen/video/upload/v1536418352/%E5%AD%A6%E6%A0%A1%E3%81%AF%E3%81%A8%E3%82%99%E3%81%93.mp3',null,3,4),
+('image','https://res.cloudinary.com/helenen/image/upload/v1536420030/une-ecole-intercommunale-realisee-en-un-an-par-des-entreprises-locales-et-des-maitres-d-oeuvre-et-d-ouvrage-competents-1447789284-150x150.jpg','学校はどこ？',4,4),
+('sound','https://res.cloudinary.com/helenen/video/upload/v1536436452/%E3%81%93%E3%82%8C%E3%81%AF%E4%BD%95.mp3',null,5,5),
+('image','https://res.cloudinary.com/helenen/image/upload/v1536436461/sarl-ou-sas.jpg','これは何？',5,5);
 
