@@ -148,9 +148,10 @@ En fait, vous remarquerez que nous utilisons déjà un (une sorte de) adverbe de
 INSERT INTO exercise (QUESTION_ASSET_ITEM, GOOD_QUESTION_ITEM, ANSWER_QUESTION_ITEM1, ANSWER_QUESTION_ITEM2, ANSWER_QUESTION_ITEM3, EXERCISE_ORDER, chapter_id)
 VALUES('学校_どこ？', 'は','それ','も','が', 1, 3),
 ('これ_何？','は','も','どれ','が', 2, 4),
-('ここ_図書館だ', 'が','どれ','も','は', 3, 5),
+('かもしれない','かも','かもしれません','でしょう','くつ',7,7),
 ('学校はどこ？','あそこで','こちらで','銀行の横です','美日間の横です',4,1),
-('これは何？','かぎ','ドア','くつ','コンピュータ',5,1);
+('これは何？','かぎ','ドア','くつ','コンピュータ',5,1),
+('今日は晴れて','富士山が見える', 'あそこで', '銀行の横です','美日間の横です',6,6);
 
 
 
@@ -171,8 +172,14 @@ VALUES('Vocabulaire', 'vocabulaire'),
 INSERT INTO asset (type, value, transcription, asset_order, exercise_id)
 VALUES('sound','https://res.cloudinary.com/helenen/video/upload/v1536407552/%E3%81%82%E3%81%AE%E3%81%AF%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%84%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%E3%81%A6%E3%82%99%E3%81%99.mp3',null, 1, 1),
 ('image', 'https://res.cloudinary.com/helenen/image/upload/v1535461637/Lion_d_Afrique.jpg','あのはおおきいライオンです。', 2,1),
+('sound', 'https://res.cloudinary.com/helenen/video/upload/v1536690723/%E5%B8%B0%E3%82%8B.mp3', null,7,2),
+('image','https://res.cloudinary.com/helenen/image/upload/v1536690808/shutterstock_265620959.jpg','帰る',8,2),
+('sound','https://res.cloudinary.com/helenen/video/upload/v1536691489/%E3%82%B9%E3%83%9F%E3%82%B9%E3%81%95%E3%82%93%E3%81%AF%E9%A3%9F%E5%A0%82%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%9F%E3%81%8B%E3%82%82%E3%81%97%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93.mp3',null,9,3),
+('image','https://res.cloudinary.com/helenen/image/upload/v1536691436/25296823.jpg','スミスさんは食堂に行ったかもしれません。',10,3),
 ('sound', 'https://res.cloudinary.com/helenen/video/upload/v1536418352/%E5%AD%A6%E6%A0%A1%E3%81%AF%E3%81%A8%E3%82%99%E3%81%93.mp3',null,3,4),
 ('image','https://res.cloudinary.com/helenen/image/upload/v1536420030/une-ecole-intercommunale-realisee-en-un-an-par-des-entreprises-locales-et-des-maitres-d-oeuvre-et-d-ouvrage-competents-1447789284-150x150.jpg','学校はどこ？',4,4),
 ('sound','https://res.cloudinary.com/helenen/video/upload/v1536436452/%E3%81%93%E3%82%8C%E3%81%AF%E4%BD%95.mp3',null,5,5),
-('image','https://res.cloudinary.com/helenen/image/upload/v1536436461/sarl-ou-sas.jpg','これは何？',5,5);
+('image','https://res.cloudinary.com/helenen/image/upload/v1536436461/sarl-ou-sas.jpg','これは何？',5,5),
+('sound','https://res.cloudinary.com/helenen/video/upload/v1536689657/%E4%BB%8A%E6%97%A5%E3%81%AF%E6%99%B4%E3%82%8C%E3%81%A6_%E5%AF%8C%E5%A3%AB%E5%B1%B1%E3%81%8B%E3%82%99%E8%A6%8B%E3%81%88%E3%82%8B.mp3',null,6,6),
+('image','https://res.cloudinary.com/helenen/image/upload/v1536689717/280px-FujiSunriseKawaguchiko2025WP.jpg','今日は晴れて、富士山が見える',6,6);
 
